@@ -1,0 +1,15 @@
+{
+  "name": "story-planner-viewer",
+  "version": "1.0.0",
+  "description": "Displays the story plan from JSON.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,361 @@
+{
+  "story_title": "The Shifting Dungeon Expedition",
+  "characters": [
+    {
+      "id": "char_001",
+      "name": "Valerius Stonehand",
+      "description": "Human Fighter, stoic and protective, feels responsible for the group.",
+      "attributes": {
+        "static": { "species": "Human", "class": "Fighter", "background": "City Guard" },
+        "dynamic_history": [
+          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Determined", "health": "Full" } }
+        ]
+      },
+      "relationships": [
+        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+      ]
+    },
+    {
+      "id": "char_002",
+      "name": "Lyra Meadowlight",
+      "description": "Elf Ranger, observant and cautious, skilled tracker.",
+      "attributes": {
+        "static": { "species": "Elf", "class": "Ranger", "background": "Forest Hermit" },
+        "dynamic_history": [
+          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Apprehensive", "health": "Full" } }
+        ]
+      },
+      "relationships": [
+        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+      ]
+    },
+    {
+      "id": "char_003",
+      "name": "Flick Quickfingers",
+      "description": "Halfling Rogue, curious and opportunistic, good with locks and traps.",
+      "attributes": {
+        "static": { "species": "Halfling", "class": "Rogue", "background": "Urchin" },
+        "dynamic_history": [
+          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Excited", "health": "Full" } }
+        ]
+      },
+      "relationships": [
+        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+      ]
+    },
+    {
+      "id": "char_004",
+      "name": "Brother Theron",
+      "description": "Dwarf Cleric, gruff but faithful, dedicated healer.",
+      "attributes": {
+        "static": { "species": "Dwarf", "class": "Cleric", "background": "Temple Acolyte" },
+        "dynamic_history": [
+          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Resolute", "health": "Full" } }
+        ]
+      },
+      "relationships": [
+        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+      ]
+    },
+    {
+      "id": "char_005",
+      "name": "Zephyr Windwhisper",
+      "description": "Gnome Wizard, inquisitive and easily distracted, fascinated by the portals.",
+      "attributes": {
+        "static": { "species": "Gnome", "class": "Wizard", "background": "Sage Apprentice" },
+        "dynamic_history": [
+          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Curious", "health": "Full" } }
+        ]
+      },
+      "relationships": [
+        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
+        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+      ]
+    }
+  ],
+  "locations": [
+      { "id": "loc_001", "name": "Capital City - Ministry of Exploration" },
+      { "id": "loc_002", "name": "The Shifting Dungeon - Entrance" },
+      { "id": "loc_003", "name": "Dungeon - Portal Hub Alpha" },
+      { "id": "loc_004", "name": "Dungeon - Glimmering Caves" },
+      { "id": "loc_005", "name": "Dungeon - Echoing Library" },
+      { "id": "loc_006", "name": "Dungeon - Collapsed Passage" },
+      { "id": "loc_007", "name": "Dungeon - Fungal Forest" },
+      { "id": "loc_008", "name": "Dungeon - Crystal Labyrinth" },
+      { "id": "loc_009", "name": "Dungeon - Portal Hub Beta" }
+  ],
+  "events": [
+    {
+      "id": "evt_001",
+      "timestamp": "M1_D1",
+      "description": "The group receives their assignment from the Ministry of Exploration.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_001",
+      "effects": [
+        { "target": "char_001", "state_change": { "mood": "Focused" } },
+        { "target": "char_002", "state_change": { "mood": "Nervous" } },
+        { "target": "char_003", "state_change": { "mood": "Eager" } },
+        { "target": "char_004", "state_change": { "mood": "Dutiful" } },
+        { "target": "char_005", "state_change": { "mood": "Intrigued" } }
+      ]
+    },
+    {
+      "id": "evt_002",
+      "timestamp": "M1_D5",
+      "description": "First entry into the Shifting Dungeon. The entrance portal feels unstable.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_002",
+      "effects": [
+        { "target": "char_001", "state_change": { "location": "loc_003" } },
+        { "target": "char_002", "state_change": { "location": "loc_003" } },
+        { "target": "char_003", "state_change": { "location": "loc_003" } },
+        { "target": "char_004", "state_change": { "location": "loc_003" } },
+        { "target": "char_005", "state_change": { "location": "loc_003", "mood": "Fascinated" } }
+      ]
+    },
+    {
+      "id": "evt_003",
+      "timestamp": "M1_D15",
+      "description": "Minor skirmish with giant cave rats. Valerius protects Flick.",
+      "participants": ["char_001", "char_003", "char_004"],
+      "location_id": "loc_003",
+      "effects": [
+        { "target": "char_003", "state_change": { "health": "Slightly Injured" } },
+        { "target": "char_004", "state_change": { "mood": "Annoyed" } },
+        { "target": "relationship_char001_char003", "change": "Increased Trust" }
+      ]
+    },
+    {
+      "id": "evt_004",
+      "timestamp": "M2_D3",
+      "description": "Lyra successfully navigates the group through the Glimmering Caves, avoiding a hidden chasm.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_004",
+      "effects": [
+        { "target": "char_002", "state_change": { "mood": "Confident" } },
+        { "target": "relationship_char002_char001", "change": "Increased Respect" },
+        { "target": "relationship_char002_char005", "change": "Increased Respect" }
+      ]
+    },
+    {
+      "id": "evt_005",
+      "timestamp": "M2_D20",
+      "description": "Running low on rations. Flick 'finds' some edible fungi, sharing reluctantly.",
+      "participants": ["char_003", "char_004"],
+      "location_id": "loc_004",
+      "effects": [
+        { "target": "char_003", "state_change": { "mood": "Smug" } },
+        { "target": "char_004", "state_change": { "mood": "Suspicious" } },
+        { "target": "relationship_char003_char004", "change": "Minor Conflict/Distrust" }
+      ]
+    },
+    {
+      "id": "evt_006",
+      "timestamp": "M3_D10",
+      "description": "Zephyr deciphers strange runes in the Echoing Library, revealing a clue about portal stability.",
+      "participants": ["char_005", "char_002"],
+      "location_id": "loc_005",
+      "effects": [
+        { "target": "char_005", "state_change": { "mood": "Excited" } },
+        { "target": "relationship_char005_char002", "change": "Shared Discovery/Bonding" }
+      ]
+    },
+    {
+      "id": "evt_007",
+      "timestamp": "M3_D25",
+      "description": "Ambushed by Goblins. Brother Theron heals Valerius from a serious wound.",
+      "participants": ["char_001", "char_004", "char_003"],
+      "location_id": "loc_005",
+      "effects": [
+        { "target": "char_001", "state_change": { "health": "Injured", "mood": "Grateful" } },
+        { "target": "char_004", "state_change": { "mood": "Focused" } },
+        { "target": "relationship_char004_char001", "change": "Increased Trust/Life Debt" }
+      ]
+    },
+    {
+      "id": "evt_008",
+      "timestamp": "M4_D5",
+      "description": "A portal malfunctions, separating Lyra and Flick from the others.",
+      "participants": ["char_002", "char_003"],
+      "location_id": "loc_003",
+      "effects": [
+        { "target": "char_002", "state_change": { "location": "loc_006", "mood": "Worried" } },
+        { "target": "char_003", "state_change": { "location": "loc_006", "mood": "Scared" } },
+        { "target": "char_001", "state_change": { "mood": "Anxious" } },
+        { "target": "char_004", "state_change": { "mood": "Concerned" } },
+        { "target": "char_005", "state_change": { "mood": "Distressed" } }
+      ]
+    },
+     {
+      "id": "evt_009",
+      "timestamp": "M4_D15",
+      "description": "Lyra and Flick navigate the Collapsed Passage and reunite with the group, relying on each other's skills.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_006",
+      "effects": [
+        { "target": "char_002", "state_change": { "location": "loc_007", "mood": "Relieved" } },
+        { "target": "char_003", "state_change": { "location": "loc_007", "mood": "Relieved" } },
+        { "target": "char_001", "state_change": { "location": "loc_007" } },
+        { "target": "char_004", "state_change": { "location": "loc_007" } },
+        { "target": "char_005", "state_change": { "location": "loc_007" } },
+        { "target": "relationship_char002_char003", "change": "Became Allies/Stronger Bond" }
+      ]
+    },
+    {
+      "id": "evt_010",
+      "timestamp": "M5_D8",
+      "description": "Discovering ancient murals depicting the dungeon's purpose. Zephyr is engrossed, ignoring immediate danger.",
+      "participants": ["char_005", "char_001"],
+      "location_id": "loc_007",
+      "effects": [
+        { "target": "char_005", "state_change": { "mood": "Obsessed" } },
+        { "target": "char_001", "state_change": { "mood": "Frustrated" } },
+        { "target": "relationship_char001_char005", "change": "Minor Conflict/Annoyance" }
+      ]
+    },
+    {
+      "id": "evt_011",
+      "timestamp": "M5_D22",
+      "description": "Encounter a trapped creature. Theron insists on freeing it, causing debate about safety vs. compassion.",
+      "participants": ["char_004", "char_002", "char_001"],
+      "location_id": "loc_007",
+      "effects": [
+        { "target": "char_004", "state_change": { "mood": "Righteous" } },
+        { "target": "char_002", "state_change": { "mood": "Uncertain" } },
+        { "target": "relationship_char004_char002", "change": "Philosophical Disagreement" }
+      ]
+    },
+    {
+      "id": "evt_012",
+      "timestamp": "M6_D12",
+      "description": "A large Cave Troll attacks. Valerius holds it off while the others prepare a trap.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_008",
+      "effects": [
+        { "target": "char_001", "state_change": { "health": "Moderately Injured", "mood": "Strained" } },
+        { "target": "relationship_char001_char002", "change": "Increased Teamwork/Trust" },
+        { "target": "relationship_char001_char003", "change": "Increased Teamwork/Trust" },
+        { "target": "relationship_char001_char004", "change": "Increased Teamwork/Trust" },
+        { "target": "relationship_char001_char005", "change": "Increased Teamwork/Trust" }
+      ]
+    },
+    {
+      "id": "evt_013",
+      "timestamp": "M6_D13",
+      "description": "Flick triggers the trap successfully, saving Valerius. Theron heals Valerius again.",
+      "participants": ["char_003", "char_001", "char_004"],
+      "location_id": "loc_008",
+      "effects": [
+        { "target": "char_003", "state_change": { "mood": "Proud" } },
+        { "target": "char_001", "state_change": { "health": "Injured", "mood": "Indebted" } },
+        { "target": "relationship_char003_char001", "change": "Major Trust Increase/Respect" }
+      ]
+    },
+    {
+      "id": "evt_014",
+      "timestamp": "M7_D7",
+      "description": "Navigating the Crystal Labyrinth. Zephyr's magic misfires, causing temporary disorientation.",
+      "participants": ["char_005", "char_004"],
+      "location_id": "loc_008",
+      "effects": [
+        { "target": "char_005", "state_change": { "mood": "Embarrassed" } },
+        { "target": "char_004", "state_change": { "mood": "Exasperated" } },
+        { "target": "relationship_char005_char004", "change": "Friction/Annoyance" }
+      ]
+    },
+    {
+      "id": "evt_015",
+      "timestamp": "M7_D21",
+      "description": "Argument about the best path forward. Lyra's caution clashes with Flick's desire for shortcuts.",
+      "participants": ["char_002", "char_003", "char_001"],
+      "location_id": "loc_008",
+      "effects": [
+        { "target": "char_002", "state_change": { "mood": "Adamant" } },
+        { "target": "char_003", "state_change": { "mood": "Impatient" } },
+        { "target": "char_001", "state_change": { "mood": "Mediating" } },
+        { "target": "relationship_char002_char003", "change": "Conflict/Disagreement" }
+      ]
+    },
+    {
+      "id": "evt_016",
+      "timestamp": "M8_D4",
+      "description": "Discover Portal Hub Beta, potentially closer to an exit portal.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_009",
+      "effects": [
+        { "target": "char_001", "state_change": { "mood": "Hopeful" } },
+        { "target": "char_002", "state_change": { "mood": "Cautiously Optimistic" } },
+        { "target": "char_003", "state_change": { "mood": "Relieved" } },
+        { "target": "char_004", "state_change": { "mood": "Hopeful" } },
+        { "target": "char_005", "state_change": { "mood": "Excited" } }
+      ]
+    },
+    {
+      "id": "evt_017",
+      "timestamp": "M8_D18",
+      "description": "Confront a Golem Guardian protecting the suspected exit portal. Requires coordinated effort.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_009",
+      "effects": [
+        { "target": "char_001", "state_change": { "health": "Injured" } },
+        { "target": "char_005", "state_change": { "health": "Slightly Injured" } },
+        { "target": "relationship_all", "change": "Peak Team Cohesion" }
+      ]
+    },
+     {
+      "id": "evt_018",
+      "timestamp": "M9_D5",
+      "description": "Final mapping checks. Zephyr realizes the portals are powered by a trapped entity.",
+      "participants": ["char_005", "char_004"],
+      "location_id": "loc_009",
+      "effects": [
+        { "target": "char_005", "state_change": { "mood": "Shocked" } },
+        { "target": "char_004", "state_change": { "mood": "Disturbed" } },
+        { "target": "relationship_char005_char004", "change": "Shared Moral Concern" }
+      ]
+    },
+    {
+      "id": "evt_019",
+      "timestamp": "M9_D20",
+      "description": "Group debates freeing the entity vs. escaping. They decide to report findings and escape.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_009",
+      "effects": [
+        { "target": "char_001", "state_change": { "mood": "Resigned" } },
+        { "target": "char_002", "state_change": { "mood": "Conflicted" } },
+        { "target": "char_003", "state_change": { "mood": "Eager to Leave" } },
+        { "target": "char_004", "state_change": { "mood": "Troubled" } },
+        { "target": "char_005", "state_change": { "mood": "Regretful" } }
+      ]
+    },
+    {
+      "id": "evt_020",
+      "timestamp": "M9_D21",
+      "description": "Activate the exit portal and return to the Ministry, mission accomplished but changed.",
+      "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
+      "location_id": "loc_001",
+      "effects": [
+        { "target": "char_001", "state_change": { "location": "loc_001", "mood": "Weary" } },
+        { "target": "char_002", "state_change": { "location": "loc_001", "mood": "Thoughtful" } },
+        { "target": "char_003", "state_change": { "location": "loc_001", "mood": "Relieved" } },
+        { "target": "char_004", "state_change": { "location": "loc_001", "mood": "Somber" } },
+        { "target": "char_005", "state_change": { "location": "loc_001", "mood": "Preoccupied" } },
+        { "target": "relationship_all", "change": "Solidified Team/Shared Experience" }
+      ]
+    }
+  ]
+}

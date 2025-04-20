@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; color: #333; }
+        h1, h2, h3 { color: #5a5a5a; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .section { margin-bottom: 30px; }
+        .character-list, .event-list, .location-list, .recap-list { list-style: none; padding: 0; }
+        .character-list li, .event-list li, .location-list li, .recap-list li { background: #e9e9e9; margin-bottom: 10px; padding: 15px; border-radius: 5px; }
+        .event-list li { border-left: 5px solid #007bff; }
+        .event-timestamp { font-weight: bold; color: #0056b3; display: block; margin-bottom: 5px; }
+        .event-participants, .event-location, .event-effects { font-size: 0.9em; color: #555; margin-top: 8px; }
+        .event-effects ul { list-style: disc; margin-left: 20px; padding: 0; }
+        .character-attributes, .character-relationships { font-size: 0.9em; color: #444; margin-top: 5px; }
+        .recap-state { font-size: 0.9em; color: #666; }
+        code { background-color: #eee; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><%= title %></h1>
+
+        <div class="section">
+            <h2>Characters</h2>
+            <ul class="character-list">
+                <% characters.forEach(char => { %>
+                    <li>
+                        <strong><%= char.name %> (<%= char.id %>)</strong> - <%= char.description %><br>
+                        <div class="character-attributes">
+                            Static: Species: <%= char.attributes.static.species %>, Class: <%= char.attributes.static.class %>, Background: <%= char.attributes.static.background %>
+                        </div>
+                        <% /* Note: Displaying full dynamic history and relationships can get long, omitted for brevity */ %>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Locations</h2>
+            <ul class="location-list">
+                <% 
+                const locationMap = {};
+                locations.forEach(loc => { locationMap[loc.id] = loc.name; });
+                locations.forEach(loc => { %>
+                    <li><strong><%= loc.name %></strong> (<code><%= loc.id %></code>)</li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Event Chronology</h2>
+            <ul class="event-list">
+                <% events.forEach(event => { %>
+                    <li>
+                        <span class="event-timestamp"><%= event.timestamp %> (ID: <%= event.id %>)</span>
+                        <%= event.description %><br>
+                        <% if (event.participants && event.participants.length) { %>
+                            <div class="event-participants">Participants: <%= event.participants.join(', ') %></div>
+                        <% } %>
+                        <% if (event.location_id) { %>
+                            <div class="event-location">Location: <%= locationMap[event.location_id] || event.location_id %></div>
+                        <% } %>
+                        <% if (event.effects && event.effects.length) { %>
+                            <div class="event-effects">
+                                Effects:
+                                <ul>
+                                    <% event.effects.forEach(effect => { %>
+                                        <li>
+                                            Target: <code><%= effect.target %></code>
+                                            <% if (effect.state_change) { %>
+                                                - State Change: <%= JSON.stringify(effect.state_change) %>
+                                            <% } else if (effect.change) { %>
+                                                - Relationship Change: <%= effect.change %>
+                                            <% } %>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+                        <% } %>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Story Recap (Final State)</h2>
+            <p>Approximate state of characters after the last event (<%= events.length > 0 ? events[events.length - 1].timestamp : 'Start' %>):</p>
+            <ul class="recap-list">
+                <% characterRecap.forEach(recap => { %>
+                    <li>
+                        <strong><%= recap.name %>:</strong>
+                        <div class="recap-state">
+                            <% if (Object.keys(recap.finalState).length > 0) { %>
+                                <%= Object.entries(recap.finalState).map(([key, value]) => `${key}: ${value}`).join(', ') %>
+                            <% } else { %>
+                                No specific state change recorded in the final event.
+                            <% } %>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
