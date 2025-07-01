@@ -117,6 +117,66 @@
             </ul>
         </div>
 
+        <div class="section">
+            <h2>Chronological Order View</h2>
+            <div id="timeline-container" style="width: 100%; height: 500px; border: 1px solid #ccc; position: relative;">
+                <svg id="timeline" style="width: 100%; height: 100%;"></svg>
+            </div>
+            <script type="application/json" id="events-data">
+                <%- JSON.stringify(events) %>
+            </script>
+            <script src="https://d3js.org/d3.v7.min.js"></script>
+            <script>
+                const events = JSON.parse(document.getElementById('events-data').textContent);
+
+                const width = document.getElementById('timeline-container').clientWidth;
+                const height = document.getElementById('timeline-container').clientHeight;
+
+                const svg = d3.select('#timeline')
+                    .attr('width', width)
+                    .attr('height', height);
+
+                const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+                const innerWidth = width - margin.left - margin.right;
+                const innerHeight = height - margin.top - margin.bottom;
+
+                const xScale = d3.scaleTime()
+                    .domain([new Date(events[0].timestamp), new Date(events[events.length - 1].timestamp)])
+                    .range([margin.left, innerWidth]);
+
+                const zoom = d3.zoom()
+                    .scaleExtent([1, 10])
+                    .translateExtent([[0, 0], [innerWidth, innerHeight]])
+                    .on('zoom', (event) => {
+                        svg.selectAll('g').attr('transform', event.transform);
+                    });
+
+                svg.call(zoom);
+
+                const timelineGroup = svg.append('g');
+
+                timelineGroup.selectAll('circle')
+                    .data(events)
+                    .enter()
+                    .append('circle')
+                    .attr('cx', d => xScale(new Date(d.timestamp)))
+                    .attr('cy', innerHeight / 2)
+                    .attr('r', 5)
+                    .attr('fill', 'blue')
+                    .append('title')
+                    .text(d => d.description);
+
+                timelineGroup.selectAll('text')
+                    .data(events)
+                    .enter()
+                    .append('text')
+                    .attr('x', d => xScale(new Date(d.timestamp)))
+                    .attr('y', innerHeight / 2 - 10)
+                    .attr('text-anchor', 'middle')
+                    .text(d => d.timestamp);
+            </script>
+        </div>
+
     </div>
 </body>
 </html>
