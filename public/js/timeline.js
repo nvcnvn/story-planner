@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .scaleExtent([1, 10])
         .translateExtent([[-50, -50], [innerWidth + 50, innerHeight + 50]])
         .on('zoom', (event) => {
-            svg.selectAll('g').attr('transform', event.transform);
+            svg.selectAll('g:not(.time-axis)').attr('transform', event.transform); // Exclude time axis from zoom transformations
         });
 
     svg.call(zoom);
