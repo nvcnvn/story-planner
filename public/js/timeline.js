@@ -79,9 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .data(events)
         .enter()
         .append('text')
-        .attr('x', (d, i) => xScale(new Date(d.timestamp)) + (i % 2 === 0 ? -5 : 5)) // Adjust alignment based on position
+        .attr('x', (d, i) => {
+            const textLength = d.id.length * 6; // Approximate text length based on character width
+            return xScale(new Date(d.timestamp)) + (i % 2 === 0 ? -textLength / 2 : textLength / 2); // Adjust position based on text length
+        })
         .attr('y', (d, i) => innerHeight / 2 + (i % 2 === 0 ? -30 : 30)) // Move text farther from icons
-        .attr('text-anchor', (d, i) => i % 2 === 0 ? 'end' : 'start') // Align text end or start
+        .attr('text-anchor', 'middle') // Center text alignment
         .attr('transform', (d, i) => `rotate(45, ${xScale(new Date(d.timestamp))}, ${innerHeight / 2 + (i % 2 === 0 ? -30 : 30)})`) // Tilt text at 45 degrees in the same direction
         .attr('fill', (d, i) => colors[i % colors.length]) // Match text color to shape color
         .text(d => d.id); // Display only the event ID or title
