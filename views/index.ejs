@@ -177,7 +177,7 @@
                     .enter()
                     .append('text')
                     .attr('x', d => xScale(new Date(d.timestamp)))
-                    .attr('y', innerHeight / 2 - 20) // Adjusted to avoid overlap
+                    .attr('y', (d, i) => innerHeight / 2 - 20 - (i % 2) * 15) // Stagger text vertically
                     .attr('text-anchor', 'middle')
                     .text(d => d.id); // Display only the event ID or title
 
