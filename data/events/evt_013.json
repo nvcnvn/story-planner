@@ -1,0 +1,72 @@
+{
+  "id": "evt_013",
+  "timestamp": "2025-06-13",
+  "title": "",
+  "description": "Flick triggers the trap successfully, saving Valerius. Theron heals Valerius again.",
+  "participants": [
+    "char_003",
+    "char_001",
+    "char_004"
+  ],
+  "location_id": "loc_008",
+  "effects": [
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Proud"
+      }
+    },
+    {
+      "target": "char_001",
+      "state_change": {
+        "health": "Injured",
+        "mood": "Indebted"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 30,
+          "affection": 15
+        },
+        "label": "Valerius sees Flick's true value and courage"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 5,
+          "affection": 20
+        },
+        "label": "Flick proud to have helped Valerius"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20,
+          "resentment": -15
+        },
+        "label": "Theron sees Flick's good heart beneath the rogue exterior"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_004",
+      "change": {
+        "dynamics": {
+          "respect": 15,
+          "affection": 10
+        },
+        "label": "Flick grateful for Theron's healing skills"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

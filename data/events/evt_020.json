@@ -1,0 +1,273 @@
+{
+  "id": "evt_020",
+  "timestamp": "2025-09-21",
+  "title": "",
+  "description": "Activate the exit portal and return to the Ministry, mission accomplished but changed.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_001",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "location": "loc_001",
+        "mood": "Weary"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "location": "loc_001",
+        "mood": "Thoughtful"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "location": "loc_001",
+        "mood": "Relieved"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "location": "loc_001",
+        "mood": "Somber"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "location": "loc_001",
+        "mood": "Preoccupied"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Shared adventure creates lasting bonds despite disagreements"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

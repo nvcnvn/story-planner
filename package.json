@@ -1,14 +1,20 @@
 {
-  "name": "story-planner-viewer",
+  "name": "story-planner-writer",
   "version": "1.0.0",
-  "description": "Displays the story plan from JSON.",
+  "description": "A comprehensive tool for writing and planning novels with character tracking and event management.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   },
   "author": "",
   "license": "ISC"

@@ -1,0 +1,51 @@
+{
+  "id": "evt_018",
+  "timestamp": "2025-09-05",
+  "title": "",
+  "description": "Final mapping checks. Zephyr realizes the portals are powered by a trapped entity.",
+  "participants": [
+    "char_005",
+    "char_004"
+  ],
+  "location_id": "loc_009",
+  "effects": [
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Shocked"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Disturbed"
+      }
+    },
+    {
+      "target": "relationship_char005_char004",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 10,
+          "affection": 15,
+          "resentment": -15
+        },
+        "label": "Zephyr and Theron share a profound ethical concern"
+      }
+    },
+    {
+      "target": "relationship_char004_char005",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20,
+          "affection": 10,
+          "resentment": -15
+        },
+        "label": "Theron appreciates Zephyr's moral sensitivity"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

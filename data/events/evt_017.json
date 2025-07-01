@@ -1,0 +1,270 @@
+{
+  "id": "evt_017",
+  "timestamp": "2025-08-18",
+  "title": "",
+  "description": "Confront a Golem Guardian protecting the suspected exit portal. Requires coordinated effort.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_009",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "health": "Injured"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "health": "Slightly Injured"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -20
+        },
+        "label": "Team bonds through coordinated combat"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

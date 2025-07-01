@@ -1,0 +1,74 @@
+{
+  "id": "evt_009",
+  "timestamp": "2025-04-15",
+  "title": "",
+  "description": "Lyra and Flick navigate the Collapsed Passage and reunite with the group, relying on each other's skills.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_006",
+  "effects": [
+    {
+      "target": "char_002",
+      "state_change": {
+        "location": "loc_007",
+        "mood": "Relieved"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "location": "loc_007",
+        "mood": "Relieved"
+      }
+    },
+    {
+      "target": "char_001",
+      "state_change": {
+        "location": "loc_007"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "location": "loc_007"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "location": "loc_007"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 20,
+          "affection": 15,
+          "resentment": -10
+        },
+        "label": "Lyra and Flick forge a bond through shared survival"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 30,
+          "respect": 25,
+          "affection": 20,
+          "resentment": -15
+        },
+        "label": "Flick develops deep respect for Lyra during their ordeal"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

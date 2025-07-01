@@ -1,0 +1,46 @@
+{
+  "id": "evt_014",
+  "timestamp": "2025-07-07",
+  "title": "",
+  "description": "Navigating the Crystal Labyrinth. Zephyr's magic misfires, causing temporary disorientation.",
+  "participants": [
+    "char_005",
+    "char_004"
+  ],
+  "location_id": "loc_008",
+  "effects": [
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Embarrassed"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Exasperated"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_005",
+      "change": {
+        "dynamics": {
+          "trust": -10,
+          "resentment": 15
+        },
+        "label": "Theron frustrated by Zephyr's careless spellcasting"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_004",
+      "change": {
+        "dynamics": {
+          "resentment": 20
+        },
+        "label": "Zephyr feels Theron is being unfairly harsh"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

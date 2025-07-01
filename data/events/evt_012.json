@@ -1,0 +1,81 @@
+{
+  "id": "evt_012",
+  "timestamp": "2025-06-12",
+  "title": "",
+  "description": "A large Cave Troll attacks. Valerius holds it off while the others prepare a trap.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_008",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "health": "Moderately Injured",
+        "mood": "Strained"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 25,
+          "affection": 10
+        },
+        "label": "Lyra deeply impressed by Valerius's bravery"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 30,
+          "affection": 15
+        },
+        "label": "Flick sees Valerius as truly heroic"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_001",
+      "change": {
+        "dynamics": {
+          "respect": 20,
+          "affection": 10
+        },
+        "label": "Theron admires Valerius's sacrifice"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20,
+          "affection": 15,
+          "resentment": -10
+        },
+        "label": "Zephyr realizes the importance of Valerius's protection"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20,
+          "affection": 15,
+          "resentment": -10
+        },
+        "label": "Valerius feels closer to Zephyr after protecting the group"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

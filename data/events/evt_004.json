@@ -1,0 +1,66 @@
+{
+  "id": "evt_004",
+  "timestamp": "2025-02-03",
+  "title": "",
+  "description": "Lyra successfully navigates the group through the Glimmering Caves, avoiding a hidden chasm.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_004",
+  "effects": [
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Confident"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20
+        },
+        "label": "Valerius impressed by Lyra's navigation skills"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 5,
+          "affection": 5
+        },
+        "label": "Lyra appreciates Valerius's trust in her abilities"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "respect": 15,
+          "resentment": -5
+        },
+        "label": "Flick reluctantly impressed by Lyra's skill"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 15,
+          "affection": 5
+        },
+        "label": "Zephyr fascinated by Lyra's natural intuition"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

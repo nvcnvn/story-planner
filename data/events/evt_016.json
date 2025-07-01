@@ -1,0 +1,66 @@
+{
+  "id": "evt_016",
+  "timestamp": "2025-08-04",
+  "title": "",
+  "description": "Discover Portal Hub Beta, potentially closer to an exit portal.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_009",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Hopeful"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Cautiously Optimistic"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Relieved"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Hopeful"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Excited"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "resentment": -10
+        },
+        "label": "Relief eases tension between Lyra and Flick"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "resentment": -15
+        },
+        "label": "Flick's frustration with Lyra fades with progress"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

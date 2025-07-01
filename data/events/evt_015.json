@@ -1,0 +1,71 @@
+{
+  "id": "evt_015",
+  "timestamp": "2025-07-21",
+  "title": "",
+  "description": "Argument about the best path forward. Lyra's caution clashes with Flick's desire for shortcuts.",
+  "participants": [
+    "char_002",
+    "char_003",
+    "char_001"
+  ],
+  "location_id": "loc_008",
+  "effects": [
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Adamant"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Impatient"
+      }
+    },
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Mediating"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": -15,
+          "resentment": 20
+        },
+        "label": "Lyra frustrated by Flick reverting to recklessness"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "resentment": 25
+        },
+        "label": "Flick feels Lyra is too controlling"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_002",
+      "change": {
+        "dynamics": {
+          "respect": 5
+        },
+        "label": "Valerius appreciates Lyra's commitment to safety"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "affection": 5
+        },
+        "label": "Valerius understands Flick's frustration"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

@@ -1,0 +1,67 @@
+{
+  "id": "evt_008",
+  "timestamp": "2025-04-05",
+  "title": "",
+  "description": "A portal malfunctions, separating Lyra and Flick from the others.",
+  "participants": [
+    "char_002",
+    "char_003"
+  ],
+  "location_id": "loc_003",
+  "effects": [
+    {
+      "target": "char_002",
+      "state_change": {
+        "location": "loc_006",
+        "mood": "Worried"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "location": "loc_006",
+        "mood": "Scared"
+      }
+    },
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Anxious"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Concerned"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Distressed"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 5
+        },
+        "label": "Lyra realizes she must work with Flick to survive"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 5,
+          "affection": 5
+        },
+        "label": "Flick relies on Lyra's calm in crisis"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

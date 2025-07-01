@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= isEdit ? 'Edit' : 'Add' %> Location</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.8);
+        }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar p-3">
+                <h4 class="text-white mb-4">
+                    <i class="fas fa-book"></i> Story Planner
+                </h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/story/settings">
+                            <i class="fas fa-cog"></i> Story Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/characters">
+                            <i class="fas fa-users"></i> Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/locations">
+                            <i class="fas fa-map-marker-alt"></i> Locations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lore">
+                            <i class="fas fa-scroll"></i> Lore
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events">
+                            <i class="fas fa-calendar-alt"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/relationships">
+                            <i class="fas fa-heart"></i> Relationships
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/timeline">
+                            <i class="fas fa-clock"></i> Timeline
+                        </a>
+                    </li>
+                    <hr class="text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/export">
+                            <i class="fas fa-download"></i> Export
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/import">
+                            <i class="fas fa-upload"></i> Import
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1">
+                            <%= isEdit ? 'Edit' : 'Add' %> Location
+                        </span>
+                        <a href="/locations" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-arrow-left"></i> Back to Locations
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="container-fluid p-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>
+                                        <i class="fas fa-map-marker-alt"></i> 
+                                        <%= isEdit ? 'Edit Location' : 'Create New Location' %>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="<%= isEdit ? '/locations/' + location.id : '/locations' %>">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="mb-3">
+                                                    <label for="name" class="form-label">Location Name *</label>
+                                                    <input type="text" class="form-control" id="name" name="name" 
+                                                           value="<%= location ? location.name : '' %>" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label for="type" class="form-label">Type</label>
+                                                    <select class="form-control" id="type" name="type">
+                                                        <option value="">Select Type</option>
+                                                        <option value="City" <%= (location && location.type === 'City') ? 'selected' : '' %>>City</option>
+                                                        <option value="Town" <%= (location && location.type === 'Town') ? 'selected' : '' %>>Town</option>
+                                                        <option value="Village" <%= (location && location.type === 'Village') ? 'selected' : '' %>>Village</option>
+                                                        <option value="Dungeon" <%= (location && location.type === 'Dungeon') ? 'selected' : '' %>>Dungeon</option>
+                                                        <option value="Forest" <%= (location && location.type === 'Forest') ? 'selected' : '' %>>Forest</option>
+                                                        <option value="Mountain" <%= (location && location.type === 'Mountain') ? 'selected' : '' %>>Mountain</option>
+                                                        <option value="Castle" <%= (location && location.type === 'Castle') ? 'selected' : '' %>>Castle</option>
+                                                        <option value="Temple" <%= (location && location.type === 'Temple') ? 'selected' : '' %>>Temple</option>
+                                                        <option value="Tavern" <%= (location && location.type === 'Tavern') ? 'selected' : '' %>>Tavern</option>
+                                                        <option value="Other" <%= (location && location.type === 'Other') ? 'selected' : '' %>>Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Description</label>
+                                            <textarea class="form-control" id="description" name="description" rows="3" 
+                                                      placeholder="Describe the location's appearance, atmosphere, significance..."><%= location ? location.description : '' %></textarea>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label for="climate" class="form-label">Climate</label>
+                                                    <input type="text" class="form-control" id="climate" name="climate" 
+                                                           value="<%= (location && location.properties && location.properties.climate) || '' %>"
+                                                           placeholder="Temperate, Cold, Hot...">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label for="terrain" class="form-label">Terrain</label>
+                                                    <input type="text" class="form-control" id="terrain" name="terrain" 
+                                                           value="<%= (location && location.properties && location.properties.terrain) || '' %>"
+                                                           placeholder="Plains, Hills, Underground...">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label for="population" class="form-label">Population</label>
+                                                    <input type="text" class="form-control" id="population" name="population" 
+                                                           value="<%= (location && location.properties && location.properties.population) || '' %>"
+                                                           placeholder="Large, Small, Uninhabited...">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/locations" class="btn btn-outline-secondary me-md-2">Cancel</a>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save"></i> 
+                                                <%= isEdit ? 'Update Location' : 'Create Location' %>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

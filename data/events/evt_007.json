@@ -1,0 +1,60 @@
+{
+  "id": "evt_007",
+  "timestamp": "2025-03-25",
+  "title": "",
+  "description": "Ambushed by Goblins. Brother Theron heals Valerius from a serious wound.",
+  "participants": [
+    "char_001",
+    "char_004",
+    "char_003"
+  ],
+  "location_id": "loc_005",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "health": "Injured",
+        "mood": "Grateful"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Focused"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 20,
+          "affection": 15
+        },
+        "label": "Valerius deeply grateful for Theron's life-saving healing"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Theron impressed by Valerius's bravery in combat"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "respect": 20
+        },
+        "label": "Flick sees Valerius's selflessness in battle"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

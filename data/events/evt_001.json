@@ -1,0 +1,298 @@
+{
+  "id": "evt_001",
+  "timestamp": "2025-01-01",
+  "title": "",
+  "description": "The group receives their assignment from the Ministry of Exploration.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_001",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Focused",
+        "location": "loc_001",
+        "health": "Full"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Nervous",
+        "location": "loc_001",
+        "health": "Full"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Eager",
+        "location": "loc_001",
+        "health": "Full"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Dutiful",
+        "location": "loc_001",
+        "health": "Full"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Intrigued",
+        "location": "loc_001",
+        "health": "Full"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 30,
+          "respect": 40,
+          "affection": 0,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 30,
+          "affection": 5,
+          "resentment": 10
+        },
+        "label": "Initial acquaintance, slight wariness of Flick's roguish nature"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 40,
+          "respect": 50,
+          "affection": 0,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, respects Brother Theron's devotion"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 35,
+          "affection": 0,
+          "resentment": 5
+        },
+        "label": "Initial acquaintance, slightly concerned about Zephyr's focus"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 35,
+          "respect": 45,
+          "affection": 0,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, respects Valerius's combat experience"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 20,
+          "affection": 0,
+          "resentment": 15
+        },
+        "label": "Initial acquaintance, wary of Flick's impulsiveness"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 30,
+          "respect": 40,
+          "affection": 5,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, appreciates Theron's wisdom"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 35,
+          "affection": 10,
+          "resentment": 5
+        },
+        "label": "Initial acquaintance, finds Zephyr's enthusiasm both endearing and concerning"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 40,
+          "respect": 55,
+          "affection": 15,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, admires Valerius's strength and leadership"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 30,
+          "affection": 5,
+          "resentment": 20
+        },
+        "label": "Initial acquaintance, finds Lyra too uptight"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 25,
+          "respect": 35,
+          "affection": 0,
+          "resentment": 15
+        },
+        "label": "Initial acquaintance, dislikes Theron's moral lectures"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 35,
+          "respect": 30,
+          "affection": 25,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, enjoys Zephyr's enthusiasm and curiosity"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 45,
+          "respect": 50,
+          "affection": 10,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, appreciates Valerius's sense of duty"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 35,
+          "respect": 45,
+          "affection": 5,
+          "resentment": 5
+        },
+        "label": "Initial acquaintance, respects Lyra's caution but finds her aloof"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 25,
+          "affection": 15,
+          "resentment": 10
+        },
+        "label": "Initial acquaintance, concerned about Flick's ethics but amused by spirit"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 30,
+          "respect": 40,
+          "affection": 15,
+          "resentment": 5
+        },
+        "label": "Initial acquaintance, respects Zephyr's knowledge, worries about his focus"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 50,
+          "respect": 45,
+          "affection": 10,
+          "resentment": 5
+        },
+        "label": "Initial acquaintance, feels safe with Valerius but dislikes being told to focus"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 35,
+          "respect": 45,
+          "affection": 15,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, fascinated by Lyra's knowledge of nature"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 30,
+          "respect": 35,
+          "affection": 30,
+          "resentment": 0
+        },
+        "label": "Initial acquaintance, enjoys Flick's adventurous spirit and humor"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_004",
+      "change": {
+        "dynamics": {
+          "trust": 40,
+          "respect": 50,
+          "affection": 5,
+          "resentment": 10
+        },
+        "label": "Initial acquaintance, respects Theron's wisdom but finds him too serious"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

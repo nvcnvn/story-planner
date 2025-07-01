@@ -1,0 +1,47 @@
+{
+  "id": "evt_010",
+  "timestamp": "2025-05-08",
+  "title": "",
+  "description": "Discovering ancient murals depicting the dungeon's purpose. Zephyr is engrossed, ignoring immediate danger.",
+  "participants": [
+    "char_005",
+    "char_001"
+  ],
+  "location_id": "loc_007",
+  "effects": [
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Obsessed"
+      }
+    },
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Frustrated"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": -10,
+          "respect": -5,
+          "resentment": 20
+        },
+        "label": "Valerius frustrated by Zephyr's lack of caution"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "resentment": 15
+        },
+        "label": "Zephyr feels Valerius doesn't value knowledge enough"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

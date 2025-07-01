@@ -1,0 +1,58 @@
+{
+  "id": "evt_011",
+  "timestamp": "2025-05-22",
+  "title": "",
+  "description": "Encounter a trapped creature. Theron insists on freeing it, causing debate about safety vs. compassion.",
+  "participants": [
+    "char_004",
+    "char_002",
+    "char_001"
+  ],
+  "location_id": "loc_007",
+  "effects": [
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Righteous"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Uncertain"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_002",
+      "change": {
+        "dynamics": {
+          "respect": -5,
+          "resentment": 10
+        },
+        "label": "Theron disappointed by Lyra's caution over compassion"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_004",
+      "change": {
+        "dynamics": {
+          "respect": 5,
+          "resentment": 15
+        },
+        "label": "Lyra frustrated by Theron's moral stance ignoring practical concerns"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_004",
+      "change": {
+        "dynamics": {
+          "respect": 5,
+          "resentment": 10
+        },
+        "label": "Valerius conflicted about Theron's priorities"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

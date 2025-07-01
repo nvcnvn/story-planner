@@ -1,0 +1,60 @@
+{
+  "id": "evt_003",
+  "timestamp": "2025-01-15",
+  "title": "",
+  "description": "Minor skirmish with giant cave rats. Valerius protects Flick.",
+  "participants": [
+    "char_001",
+    "char_003",
+    "char_004"
+  ],
+  "location_id": "loc_003",
+  "effects": [
+    {
+      "target": "char_003",
+      "state_change": {
+        "health": "Slightly Injured"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Annoyed"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_003",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 10,
+          "affection": 5
+        },
+        "label": "Valerius protects Flick from harm"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_001",
+      "change": {
+        "dynamics": {
+          "trust": 20,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -5
+        },
+        "label": "Flick grateful for Valerius's protection"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "resentment": 10
+        },
+        "label": "Theron annoyed at Flick's carelessness causing the rat attack"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

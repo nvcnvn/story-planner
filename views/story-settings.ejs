@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.8);
+        }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar p-3">
+                <h4 class="text-white mb-4">
+                    <i class="fas fa-book"></i> Story Planner
+                </h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/story/settings">
+                            <i class="fas fa-cog"></i> Story Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/characters">
+                            <i class="fas fa-users"></i> Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/locations">
+                            <i class="fas fa-map-marker-alt"></i> Locations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lore">
+                            <i class="fas fa-scroll"></i> Lore
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events">
+                            <i class="fas fa-calendar-alt"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/relationships">
+                            <i class="fas fa-heart"></i> Relationships
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/timeline">
+                            <i class="fas fa-clock"></i> Timeline
+                        </a>
+                    </li>
+                    <hr class="text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/export">
+                            <i class="fas fa-download"></i> Export
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/import">
+                            <i class="fas fa-upload"></i> Import
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1">Story Settings</span>
+                        <a href="/" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="container-fluid p-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5><i class="fas fa-cog"></i> Story Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="/story/settings">
+                                        <div class="mb-3">
+                                            <label for="title" class="form-label">Story Title *</label>
+                                            <input type="text" class="form-control" id="title" name="title" 
+                                                   value="<%= story.story_title || '' %>" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="author" class="form-label">Author</label>
+                                            <input type="text" class="form-control" id="author" name="author" 
+                                                   value="<%= (story.metadata && story.metadata.author) || '' %>">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="genre" class="form-label">Genre</label>
+                                            <select class="form-control" id="genre" name="genre">
+                                                <option value="">Select Genre</option>
+                                                <option value="Fantasy" <%= (story.metadata && story.metadata.genre === 'Fantasy') ? 'selected' : '' %>>Fantasy</option>
+                                                <option value="Science Fiction" <%= (story.metadata && story.metadata.genre === 'Science Fiction') ? 'selected' : '' %>>Science Fiction</option>
+                                                <option value="Romance" <%= (story.metadata && story.metadata.genre === 'Romance') ? 'selected' : '' %>>Romance</option>
+                                                <option value="Mystery" <%= (story.metadata && story.metadata.genre === 'Mystery') ? 'selected' : '' %>>Mystery</option>
+                                                <option value="Thriller" <%= (story.metadata && story.metadata.genre === 'Thriller') ? 'selected' : '' %>>Thriller</option>
+                                                <option value="Historical Fiction" <%= (story.metadata && story.metadata.genre === 'Historical Fiction') ? 'selected' : '' %>>Historical Fiction</option>
+                                                <option value="Literary Fiction" <%= (story.metadata && story.metadata.genre === 'Literary Fiction') ? 'selected' : '' %>>Literary Fiction</option>
+                                                <option value="Young Adult" <%= (story.metadata && story.metadata.genre === 'Young Adult') ? 'selected' : '' %>>Young Adult</option>
+                                                <option value="Horror" <%= (story.metadata && story.metadata.genre === 'Horror') ? 'selected' : '' %>>Horror</option>
+                                                <option value="Other" <%= (story.metadata && story.metadata.genre === 'Other') ? 'selected' : '' %>>Other</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Description</label>
+                                            <textarea class="form-control" id="description" name="description" rows="4" 
+                                                      placeholder="Brief description of your story..."><%= (story.metadata && story.metadata.description) || '' %></textarea>
+                                        </div>
+                                        
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/" class="btn btn-outline-secondary me-md-2">Cancel</a>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save"></i> Save Settings
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <% if (story.story_title) { %>
+                                <div class="card mt-4">
+                                    <div class="card-header">
+                                        <h5><i class="fas fa-info-circle"></i> Story Statistics</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p><strong>Created:</strong> 
+                                                    <% if (story.metadata && story.metadata.created) { %>
+                                                        <%= new Date(story.metadata.created).toLocaleDateString() %>
+                                                    <% } else { %>
+                                                        Unknown
+                                                    <% } %>
+                                                </p>
+                                                <p><strong>Last Modified:</strong> 
+                                                    <% if (story.metadata && story.metadata.last_modified) { %>
+                                                        <%= new Date(story.metadata.last_modified).toLocaleDateString() %>
+                                                    <% } else { %>
+                                                        Unknown
+                                                    <% } %>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><strong>Characters:</strong> <%= story.characters.length %></p>
+                                                <p><strong>Locations:</strong> <%= story.locations.length %></p>
+                                                <p><strong>Lore Entries:</strong> <%= story.lore.length %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

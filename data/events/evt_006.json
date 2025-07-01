@@ -1,0 +1,44 @@
+{
+  "id": "evt_006",
+  "timestamp": "2025-03-10",
+  "title": "",
+  "description": "Zephyr deciphers strange runes in the Echoing Library, revealing a clue about portal stability.",
+  "participants": [
+    "char_005",
+    "char_002"
+  ],
+  "location_id": "loc_005",
+  "effects": [
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Excited"
+      }
+    },
+    {
+      "target": "relationship_char_002_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 10,
+          "respect": 15,
+          "affection": 10,
+          "resentment": -5
+        },
+        "label": "Lyra impressed by Zephyr's scholarly knowledge"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_002",
+      "change": {
+        "dynamics": {
+          "trust": 15,
+          "respect": 10,
+          "affection": 15
+        },
+        "label": "Zephyr enjoys Lyra's genuine interest in his discoveries"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

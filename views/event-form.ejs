@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= isEdit ? 'Edit' : 'Add' %> Event</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.8);
+        }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar p-3">
+                <h4 class="text-white mb-4">
+                    <i class="fas fa-book"></i> Story Planner
+                </h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/story/settings">
+                            <i class="fas fa-cog"></i> Story Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/characters">
+                            <i class="fas fa-users"></i> Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/locations">
+                            <i class="fas fa-map-marker-alt"></i> Locations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lore">
+                            <i class="fas fa-scroll"></i> Lore
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/events">
+                            <i class="fas fa-calendar-alt"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/relationships">
+                            <i class="fas fa-heart"></i> Relationships
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/timeline">
+                            <i class="fas fa-clock"></i> Timeline
+                        </a>
+                    </li>
+                    <hr class="text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/export">
+                            <i class="fas fa-download"></i> Export
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/import">
+                            <i class="fas fa-upload"></i> Import
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1">
+                            <%= isEdit ? 'Edit' : 'Add' %> Event
+                        </span>
+                        <a href="/events" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-arrow-left"></i> Back to Events
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="container-fluid p-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>
+                                        <i class="fas fa-calendar-alt"></i> 
+                                        <%= isEdit ? 'Edit Event' : 'Create New Event' %>
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="<%= isEdit ? '/events/' + event.id : '/events' %>">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="title" class="form-label">Event Title</label>
+                                                    <input type="text" class="form-control" id="title" name="title" 
+                                                           value="<%= event ? event.title : '' %>" 
+                                                           placeholder="Brief title for this event">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="timestamp" class="form-label">Date/Time *</label>
+                                                    <input type="datetime-local" class="form-control" id="timestamp" name="timestamp" 
+                                                           value="<%= event ? new Date(event.timestamp).toISOString().slice(0, 16) : '' %>" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Description *</label>
+                                            <textarea class="form-control" id="description" name="description" rows="4" 
+                                                      placeholder="Describe what happens in this event..." required><%= event ? event.description : '' %></textarea>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="participants" class="form-label">Participants</label>
+                                                    <select class="form-control" id="participants" name="participants" multiple size="5">
+                                                        <% characters.forEach(function(character) { %>
+                                                            <option value="<%= character.id %>" 
+                                                                    <%= (event && event.participants && event.participants.includes(character.id)) ? 'selected' : '' %>>
+                                                                <%= character.name %>
+                                                            </option>
+                                                        <% }); %>
+                                                    </select>
+                                                    <div class="form-text">Hold Ctrl/Cmd to select multiple characters</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="location_id" class="form-label">Location</label>
+                                                    <select class="form-control" id="location_id" name="location_id">
+                                                        <option value="">Select Location</option>
+                                                        <% locations.forEach(function(location) { %>
+                                                            <option value="<%= location.id %>" 
+                                                                    <%= (event && event.location_id === location.id) ? 'selected' : '' %>>
+                                                                <%= location.name %>
+                                                            </option>
+                                                        <% }); %>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="tags" class="form-label">Tags</label>
+                                                    <input type="text" class="form-control" id="tags" name="tags" 
+                                                           value="<%= (event && event.tags) ? event.tags.join(', ') : '' %>"
+                                                           placeholder="combat, dialogue, discovery (comma-separated)">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="notes" class="form-label">Notes</label>
+                                            <textarea class="form-control" id="notes" name="notes" rows="2" 
+                                                      placeholder="Additional notes about this event..."><%= event ? event.notes : '' %></textarea>
+                                        </div>
+
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <a href="/events" class="btn btn-outline-secondary me-md-2">Cancel</a>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save"></i> 
+                                                <%= isEdit ? 'Update Event' : 'Create Event' %>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <% if (!isEdit) { %>
+                                <div class="alert alert-info mt-4">
+                                    <i class="fas fa-info-circle"></i>
+                                    <strong>Next Step:</strong> After creating this event, you'll be able to define its effects on characters and relationships.
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

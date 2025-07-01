@@ -1,0 +1,77 @@
+{
+  "id": "evt_019",
+  "timestamp": "2025-09-20",
+  "title": "",
+  "description": "Group debates freeing the entity vs. escaping. They decide to report findings and escape.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_009",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "mood": "Resigned"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "mood": "Conflicted"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Eager to Leave"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Troubled"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "mood": "Regretful"
+      }
+    },
+    {
+      "target": "relationship_char004_char003",
+      "change": {
+        "dynamics": {
+          "resentment": 15
+        },
+        "label": "Theron disappointed in Flick's selfish desire to leave"
+      }
+    },
+    {
+      "target": "relationship_char005_char001",
+      "change": {
+        "dynamics": {
+          "respect": -5,
+          "resentment": 10
+        },
+        "label": "Zephyr disappointed in Valerius's cautious decision"
+      }
+    },
+    {
+      "target": "relationship_char005_char003",
+      "change": {
+        "dynamics": {
+          "respect": -10,
+          "resentment": 15
+        },
+        "label": "Zephyr frustrated by Flick's self-preservation attitude"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

@@ -1,0 +1,69 @@
+{
+  "id": "evt_002",
+  "timestamp": "2025-01-05",
+  "title": "",
+  "description": "First entry into the Shifting Dungeon. The entrance portal feels unstable.",
+  "participants": [
+    "char_001",
+    "char_002",
+    "char_003",
+    "char_004",
+    "char_005"
+  ],
+  "location_id": "loc_002",
+  "effects": [
+    {
+      "target": "char_001",
+      "state_change": {
+        "location": "loc_003"
+      }
+    },
+    {
+      "target": "char_002",
+      "state_change": {
+        "location": "loc_003"
+      }
+    },
+    {
+      "target": "char_003",
+      "state_change": {
+        "location": "loc_003"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "location": "loc_003"
+      }
+    },
+    {
+      "target": "char_005",
+      "state_change": {
+        "location": "loc_003",
+        "mood": "Fascinated"
+      }
+    },
+    {
+      "target": "relationship_char_001_char_005",
+      "change": {
+        "dynamics": {
+          "trust": 5,
+          "respect": -5,
+          "resentment": 5
+        },
+        "label": "Valerius concerned about Zephyr's fascination with the portals"
+      }
+    },
+    {
+      "target": "relationship_char_005_char_001",
+      "change": {
+        "dynamics": {
+          "resentment": 10
+        },
+        "label": "Zephyr annoyed by Valerius's constant warnings"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}

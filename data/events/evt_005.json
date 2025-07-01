@@ -1,0 +1,48 @@
+{
+  "id": "evt_005",
+  "timestamp": "2025-02-20",
+  "title": "",
+  "description": "Running low on rations. Flick 'finds' some edible fungi, sharing reluctantly.",
+  "participants": [
+    "char_003",
+    "char_004"
+  ],
+  "location_id": "loc_004",
+  "effects": [
+    {
+      "target": "char_003",
+      "state_change": {
+        "mood": "Smug"
+      }
+    },
+    {
+      "target": "char_004",
+      "state_change": {
+        "mood": "Suspicious"
+      }
+    },
+    {
+      "target": "relationship_char_004_char_003",
+      "change": {
+        "dynamics": {
+          "trust": -10,
+          "respect": -5,
+          "resentment": 15
+        },
+        "label": "Theron suspects Flick stole the fungi"
+      }
+    },
+    {
+      "target": "relationship_char_003_char_004",
+      "change": {
+        "dynamics": {
+          "respect": -5,
+          "resentment": 15
+        },
+        "label": "Flick resents Theron's judgmental attitude"
+      }
+    }
+  ],
+  "notes": "",
+  "tags": []
+}
