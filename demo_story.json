@@ -8,7 +8,7 @@
       "attributes": {
         "static": { "species": "Human", "class": "Fighter", "background": "City Guard" },
         "dynamic_history": [
-          { "event_id": "evt_001", "state": { "mood": "Focused" } },
+          { "event_id": "evt_001", "state": { "mood": "Focused", "location": "loc_001", "health": "Full" } },
           { "event_id": "evt_002", "state": { "location": "loc_003" } },
           { "event_id": "evt_007", "state": { "health": "Injured", "mood": "Grateful" } },
           { "event_id": "evt_012", "state": { "health": "Moderately Injured", "mood": "Strained" } },
@@ -375,11 +375,31 @@
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_001",
       "effects": [
-        { "target": "char_001", "state_change": { "mood": "Focused" } },
-        { "target": "char_002", "state_change": { "mood": "Nervous" } },
-        { "target": "char_003", "state_change": { "mood": "Eager" } },
-        { "target": "char_004", "state_change": { "mood": "Dutiful" } },
-        { "target": "char_005", "state_change": { "mood": "Intrigued" } }
+        { "target": "char_001", "state_change": { "mood": "Focused", "location": "loc_001", "health": "Full" } },
+        { "target": "char_002", "state_change": { "mood": "Nervous", "location": "loc_001", "health": "Full" } },
+        { "target": "char_003", "state_change": { "mood": "Eager", "location": "loc_001", "health": "Full" } },
+        { "target": "char_004", "state_change": { "mood": "Dutiful", "location": "loc_001", "health": "Full" } },
+        { "target": "char_005", "state_change": { "mood": "Intrigued", "location": "loc_001", "health": "Full" } },
+        { "target": "relationship_char_001_char_002", "change": { "dynamics": { "trust": 30, "respect": 40, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance" } },
+        { "target": "relationship_char_001_char_003", "change": { "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 10 }, "label": "Initial acquaintance, slight wariness of Flick's roguish nature" } },
+        { "target": "relationship_char_001_char_004", "change": { "dynamics": { "trust": 40, "respect": 50, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance, respects Brother Theron's devotion" } },
+        { "target": "relationship_char_001_char_005", "change": { "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 5 }, "label": "Initial acquaintance, slightly concerned about Zephyr's focus" } },
+        { "target": "relationship_char_002_char_001", "change": { "dynamics": { "trust": 35, "respect": 45, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance, respects Valerius's combat experience" } },
+        { "target": "relationship_char_002_char_003", "change": { "dynamics": { "trust": 15, "respect": 20, "affection": 0, "resentment": 15 }, "label": "Initial acquaintance, wary of Flick's impulsiveness" } },
+        { "target": "relationship_char_002_char_004", "change": { "dynamics": { "trust": 30, "respect": 40, "affection": 5, "resentment": 0 }, "label": "Initial acquaintance, appreciates Theron's wisdom" } },
+        { "target": "relationship_char_002_char_005", "change": { "dynamics": { "trust": 25, "respect": 35, "affection": 10, "resentment": 5 }, "label": "Initial acquaintance, finds Zephyr's enthusiasm both endearing and concerning" } },
+        { "target": "relationship_char_003_char_001", "change": { "dynamics": { "trust": 40, "respect": 55, "affection": 15, "resentment": 0 }, "label": "Initial acquaintance, admires Valerius's strength and leadership" } },
+        { "target": "relationship_char_003_char_002", "change": { "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 20 }, "label": "Initial acquaintance, finds Lyra too uptight" } },
+        { "target": "relationship_char_003_char_004", "change": { "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 15 }, "label": "Initial acquaintance, dislikes Theron's moral lectures" } },
+        { "target": "relationship_char_003_char_005", "change": { "dynamics": { "trust": 35, "respect": 30, "affection": 25, "resentment": 0 }, "label": "Initial acquaintance, enjoys Zephyr's enthusiasm and curiosity" } },
+        { "target": "relationship_char_004_char_001", "change": { "dynamics": { "trust": 45, "respect": 50, "affection": 10, "resentment": 0 }, "label": "Initial acquaintance, appreciates Valerius's sense of duty" } },
+        { "target": "relationship_char_004_char_002", "change": { "dynamics": { "trust": 35, "respect": 45, "affection": 5, "resentment": 5 }, "label": "Initial acquaintance, respects Lyra's caution but finds her aloof" } },
+        { "target": "relationship_char_004_char_003", "change": { "dynamics": { "trust": 15, "respect": 25, "affection": 15, "resentment": 10 }, "label": "Initial acquaintance, concerned about Flick's ethics but amused by spirit" } },
+        { "target": "relationship_char_004_char_005", "change": { "dynamics": { "trust": 30, "respect": 40, "affection": 15, "resentment": 5 }, "label": "Initial acquaintance, respects Zephyr's knowledge, worries about his focus" } },
+        { "target": "relationship_char_005_char_001", "change": { "dynamics": { "trust": 50, "respect": 45, "affection": 10, "resentment": 5 }, "label": "Initial acquaintance, feels safe with Valerius but dislikes being told to focus" } },
+        { "target": "relationship_char_005_char_002", "change": { "dynamics": { "trust": 35, "respect": 45, "affection": 15, "resentment": 0 }, "label": "Initial acquaintance, fascinated by Lyra's knowledge of nature" } },
+        { "target": "relationship_char_005_char_003", "change": { "dynamics": { "trust": 30, "respect": 35, "affection": 30, "resentment": 0 }, "label": "Initial acquaintance, enjoys Flick's adventurous spirit and humor" } },
+        { "target": "relationship_char_005_char_004", "change": { "dynamics": { "trust": 40, "respect": 50, "affection": 5, "resentment": 10 }, "label": "Initial acquaintance, respects Theron's wisdom but finds him too serious" } }
       ]
     },
     {
@@ -395,14 +415,14 @@
         { "target": "char_004", "state_change": { "location": "loc_003" } },
         { "target": "char_005", "state_change": { "location": "loc_003", "mood": "Fascinated" } },
         { 
-          "target": "relationship_char001_char005", 
+          "target": "relationship_char_001_char_005", 
           "change": {
             "dynamics": { "trust": 5, "respect": -5, "resentment": 5 },
             "label": "Valerius concerned about Zephyr's fascination with the portals"
           }
         },
         { 
-          "target": "relationship_char005_char001", 
+          "target": "relationship_char_005_char_001", 
           "change": {
             "dynamics": { "resentment": 10 },
             "label": "Zephyr annoyed by Valerius's constant warnings"
@@ -420,21 +440,21 @@
         { "target": "char_003", "state_change": { "health": "Slightly Injured" } },
         { "target": "char_004", "state_change": { "mood": "Annoyed" } },
         { 
-          "target": "relationship_char001_char003", 
+          "target": "relationship_char_001_char_003", 
           "change": {
             "dynamics": { "trust": 15, "respect": 10, "affection": 5 },
             "label": "Valerius protects Flick from harm"
           }
         },
         { 
-          "target": "relationship_char003_char001", 
+          "target": "relationship_char_003_char_001", 
           "change": {
             "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -5 },
             "label": "Flick grateful for Valerius's protection"
           }
         },
         { 
-          "target": "relationship_char004_char003", 
+          "target": "relationship_char_004_char_003", 
           "change": {
             "dynamics": { "resentment": 10 },
             "label": "Theron annoyed at Flick's carelessness causing the rat attack"
@@ -451,28 +471,28 @@
       "effects": [
         { "target": "char_002", "state_change": { "mood": "Confident" } },
         { 
-          "target": "relationship_char001_char002", 
+          "target": "relationship_char_001_char_002", 
           "change": {
             "dynamics": { "trust": 15, "respect": 20 },
             "label": "Valerius impressed by Lyra's navigation skills"
           }
         },
         { 
-          "target": "relationship_char002_char001", 
+          "target": "relationship_char_002_char_001", 
           "change": {
             "dynamics": { "trust": 10, "respect": 5, "affection": 5 },
             "label": "Lyra appreciates Valerius's trust in her abilities"
           }
         },
         { 
-          "target": "relationship_char003_char002", 
+          "target": "relationship_char_003_char_002", 
           "change": {
             "dynamics": { "respect": 15, "resentment": -5 },
             "label": "Flick reluctantly impressed by Lyra's skill"
           }
         },
         { 
-          "target": "relationship_char005_char002", 
+          "target": "relationship_char_005_char_002", 
           "change": {
             "dynamics": { "trust": 10, "respect": 15, "affection": 5 },
             "label": "Zephyr fascinated by Lyra's natural intuition"
@@ -490,14 +510,14 @@
         { "target": "char_003", "state_change": { "mood": "Smug" } },
         { "target": "char_004", "state_change": { "mood": "Suspicious" } },
         { 
-          "target": "relationship_char004_char003", 
+          "target": "relationship_char_004_char_003", 
           "change": {
             "dynamics": { "trust": -10, "respect": -5, "resentment": 15 },
             "label": "Theron suspects Flick stole the fungi"
           }
         },
         { 
-          "target": "relationship_char003_char004", 
+          "target": "relationship_char_003_char_004", 
           "change": {
             "dynamics": { "respect": -5, "resentment": 15 },
             "label": "Flick resents Theron's judgmental attitude"
@@ -514,14 +534,14 @@
       "effects": [
         { "target": "char_005", "state_change": { "mood": "Excited" } },
         { 
-          "target": "relationship_char002_char005", 
+          "target": "relationship_char_002_char_005", 
           "change": {
             "dynamics": { "trust": 10, "respect": 15, "affection": 10, "resentment": -5 },
             "label": "Lyra impressed by Zephyr's scholarly knowledge"
           }
         },
         { 
-          "target": "relationship_char005_char002", 
+          "target": "relationship_char_005_char_002", 
           "change": {
             "dynamics": { "trust": 15, "respect": 10, "affection": 15 },
             "label": "Zephyr enjoys Lyra's genuine interest in his discoveries"
@@ -539,21 +559,21 @@
         { "target": "char_001", "state_change": { "health": "Injured", "mood": "Grateful" } },
         { "target": "char_004", "state_change": { "mood": "Focused" } },
         { 
-          "target": "relationship_char001_char004", 
+          "target": "relationship_char_001_char_004", 
           "change": {
             "dynamics": { "trust": 25, "respect": 20, "affection": 15 },
             "label": "Valerius deeply grateful for Theron's life-saving healing"
           }
         },
         { 
-          "target": "relationship_char004_char001", 
+          "target": "relationship_char_004_char_001", 
           "change": {
             "dynamics": { "trust": 15, "respect": 10, "affection": 15 },
             "label": "Theron impressed by Valerius's bravery in combat"
           }
         },
         { 
-          "target": "relationship_char003_char001", 
+          "target": "relationship_char_003_char_001", 
           "change": {
             "dynamics": { "respect": 20 },
             "label": "Flick sees Valerius's selflessness in battle"
@@ -574,14 +594,14 @@
         { "target": "char_004", "state_change": { "mood": "Concerned" } },
         { "target": "char_005", "state_change": { "mood": "Distressed" } },
         { 
-          "target": "relationship_char002_char003", 
+          "target": "relationship_char_002_char_003", 
           "change": {
             "dynamics": { "trust": 5 },
             "label": "Lyra realizes she must work with Flick to survive"
           }
         },
         { 
-          "target": "relationship_char003_char002", 
+          "target": "relationship_char_003_char_002", 
           "change": {
             "dynamics": { "trust": 10, "respect": 5, "affection": 5 },
             "label": "Flick relies on Lyra's calm in crisis"
@@ -602,14 +622,14 @@
         { "target": "char_004", "state_change": { "location": "loc_007" } },
         { "target": "char_005", "state_change": { "location": "loc_007" } },
         { 
-          "target": "relationship_char002_char003", 
+          "target": "relationship_char_002_char_003", 
           "change": {
             "dynamics": { "trust": 25, "respect": 20, "affection": 15, "resentment": -10 },
             "label": "Lyra and Flick forge a bond through shared survival"
           }
         },
         { 
-          "target": "relationship_char003_char002", 
+          "target": "relationship_char_003_char_002", 
           "change": {
             "dynamics": { "trust": 30, "respect": 25, "affection": 20, "resentment": -15 },
             "label": "Flick develops deep respect for Lyra during their ordeal"
@@ -627,14 +647,14 @@
         { "target": "char_005", "state_change": { "mood": "Obsessed" } },
         { "target": "char_001", "state_change": { "mood": "Frustrated" } },
         { 
-          "target": "relationship_char001_char005", 
+          "target": "relationship_char_001_char_005", 
           "change": {
             "dynamics": { "trust": -10, "respect": -5, "resentment": 20 },
             "label": "Valerius frustrated by Zephyr's lack of caution"
           }
         },
         { 
-          "target": "relationship_char005_char001", 
+          "target": "relationship_char_005_char_001", 
           "change": {
             "dynamics": { "resentment": 15 },
             "label": "Zephyr feels Valerius doesn't value knowledge enough"
@@ -652,21 +672,21 @@
         { "target": "char_004", "state_change": { "mood": "Righteous" } },
         { "target": "char_002", "state_change": { "mood": "Uncertain" } },
         { 
-          "target": "relationship_char004_char002", 
+          "target": "relationship_char_004_char_002", 
           "change": {
             "dynamics": { "respect": -5, "resentment": 10 },
             "label": "Theron disappointed by Lyra's caution over compassion"
           }
         },
         { 
-          "target": "relationship_char002_char004", 
+          "target": "relationship_char_002_char_004", 
           "change": {
             "dynamics": { "respect": 5, "resentment": 15 },
             "label": "Lyra frustrated by Theron's moral stance ignoring practical concerns"
           }
         },
         { 
-          "target": "relationship_char001_char004", 
+          "target": "relationship_char_001_char_004", 
           "change": {
             "dynamics": { "respect": 5, "resentment": 10 },
             "label": "Valerius conflicted about Theron's priorities"
@@ -683,31 +703,38 @@
       "effects": [
         { "target": "char_001", "state_change": { "health": "Moderately Injured", "mood": "Strained" } },
         { 
-          "target": "relationship_char002_char001", 
+          "target": "relationship_char_002_char_001", 
           "change": {
             "dynamics": { "trust": 15, "respect": 25, "affection": 10 },
             "label": "Lyra deeply impressed by Valerius's bravery"
           }
         },
         { 
-          "target": "relationship_char003_char001", 
+          "target": "relationship_char_003_char_001", 
           "change": {
             "dynamics": { "trust": 20, "respect": 30, "affection": 15 },
             "label": "Flick sees Valerius as truly heroic"
           }
         },
         { 
-          "target": "relationship_char004_char001", 
+          "target": "relationship_char_004_char_001", 
           "change": {
             "dynamics": { "respect": 20, "affection": 10 },
             "label": "Theron admires Valerius's sacrifice"
           }
         },
         { 
-          "target": "relationship_char005_char001", 
+          "target": "relationship_char_005_char_001", 
           "change": {
             "dynamics": { "trust": 15, "respect": 20, "affection": 15, "resentment": -10 },
             "label": "Zephyr realizes the importance of Valerius's protection"
+          }
+        },
+        { 
+          "target": "relationship_char_001_char_005", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 20, "affection": 15, "resentment": -10 },
+            "label": "Valerius feels closer to Zephyr after protecting the group"
           }
         }
       ]
@@ -722,28 +749,28 @@
         { "target": "char_003", "state_change": { "mood": "Proud" } },
         { "target": "char_001", "state_change": { "health": "Injured", "mood": "Indebted" } },
         { 
-          "target": "relationship_char001_char003", 
+          "target": "relationship_char_001_char_003", 
           "change": {
             "dynamics": { "trust": 25, "respect": 30, "affection": 15 },
             "label": "Valerius sees Flick's true value and courage"
           }
         },
         { 
-          "target": "relationship_char003_char001", 
+          "target": "relationship_char_003_char_001", 
           "change": {
             "dynamics": { "trust": 10, "respect": 5, "affection": 20 },
             "label": "Flick proud to have helped Valerius"
           }
         },
         { 
-          "target": "relationship_char004_char003", 
+          "target": "relationship_char_004_char_003", 
           "change": {
             "dynamics": { "trust": 15, "respect": 20, "resentment": -15 },
             "label": "Theron sees Flick's good heart beneath the rogue exterior"
           }
         },
         { 
-          "target": "relationship_char003_char004", 
+          "target": "relationship_char_003_char_004", 
           "change": {
             "dynamics": { "respect": 15, "affection": 10 },
             "label": "Flick grateful for Theron's healing skills"
@@ -761,14 +788,14 @@
         { "target": "char_005", "state_change": { "mood": "Embarrassed" } },
         { "target": "char_004", "state_change": { "mood": "Exasperated" } },
         { 
-          "target": "relationship_char004_char005", 
+          "target": "relationship_char_004_char_005", 
           "change": {
             "dynamics": { "trust": -10, "resentment": 15 },
             "label": "Theron frustrated by Zephyr's careless spellcasting"
           }
         },
         { 
-          "target": "relationship_char005_char004", 
+          "target": "relationship_char_005_char_004", 
           "change": {
             "dynamics": { "resentment": 20 },
             "label": "Zephyr feels Theron is being unfairly harsh"
@@ -787,28 +814,28 @@
         { "target": "char_003", "state_change": { "mood": "Impatient" } },
         { "target": "char_001", "state_change": { "mood": "Mediating" } },
         { 
-          "target": "relationship_char002_char003", 
+          "target": "relationship_char_002_char_003", 
           "change": {
             "dynamics": { "trust": -15, "resentment": 20 },
             "label": "Lyra frustrated by Flick reverting to recklessness"
           }
         },
         { 
-          "target": "relationship_char003_char002", 
+          "target": "relationship_char_003_char_002", 
           "change": {
             "dynamics": { "resentment": 25 },
             "label": "Flick feels Lyra is too controlling"
           }
         },
         { 
-          "target": "relationship_char001_char002", 
+          "target": "relationship_char_001_char_002", 
           "change": {
             "dynamics": { "respect": 5 },
             "label": "Valerius appreciates Lyra's commitment to safety"
           }
         },
         { 
-          "target": "relationship_char001_char003", 
+          "target": "relationship_char_001_char_003", 
           "change": {
             "dynamics": { "affection": 5 },
             "label": "Valerius understands Flick's frustration"
@@ -829,14 +856,14 @@
         { "target": "char_004", "state_change": { "mood": "Hopeful" } },
         { "target": "char_005", "state_change": { "mood": "Excited" } },
         { 
-          "target": "relationship_char002_char003", 
+          "target": "relationship_char_002_char_003", 
           "change": {
             "dynamics": { "resentment": -10 },
             "label": "Relief eases tension between Lyra and Flick"
           }
         },
         { 
-          "target": "relationship_char003_char002", 
+          "target": "relationship_char_003_char_002", 
           "change": {
             "dynamics": { "resentment": -15 },
             "label": "Flick's frustration with Lyra fades with progress"
@@ -853,13 +880,26 @@
       "effects": [
         { "target": "char_001", "state_change": { "health": "Injured" } },
         { "target": "char_005", "state_change": { "health": "Slightly Injured" } },
-        { 
-          "target": "relationship_all", 
-          "change": {
-            "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 },
-            "label": "Team bonds through coordinated combat"
-          }
-        }
+        { "target": "relationship_char_001_char_002", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_001_char_003", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_001_char_004", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_001_char_005", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_002_char_001", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_002_char_003", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_002_char_004", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_002_char_005", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_003_char_001", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_003_char_002", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_003_char_004", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_003_char_005", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_004_char_001", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_004_char_002", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_004_char_003", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_004_char_005", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_005_char_001", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_005_char_002", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_005_char_003", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } },
+        { "target": "relationship_char_005_char_004", "change": { "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 }, "label": "Team bonds through coordinated combat" } }
       ]
     },
     {
@@ -934,13 +974,26 @@
         { "target": "char_003", "state_change": { "location": "loc_001", "mood": "Relieved" } },
         { "target": "char_004", "state_change": { "location": "loc_001", "mood": "Somber" } },
         { "target": "char_005", "state_change": { "location": "loc_001", "mood": "Preoccupied" } },
-        { 
-          "target": "relationship_all", 
-          "change": {
-            "dynamics": { "trust": 10, "respect": 10, "affection": 15 },
-            "label": "Shared adventure creates lasting bonds despite disagreements"
-          }
-        }
+        { "target": "relationship_char_001_char_002", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_001_char_003", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_001_char_004", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_001_char_005", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_002_char_001", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_002_char_003", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_002_char_004", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_002_char_005", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_003_char_001", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_003_char_002", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_003_char_004", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_003_char_005", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_004_char_001", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_004_char_002", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_004_char_003", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_004_char_005", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_005_char_001", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_005_char_002", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_005_char_003", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } },
+        { "target": "relationship_char_005_char_004", "change": { "dynamics": { "trust": 10, "respect": 10, "affection": 15 }, "label": "Shared adventure creates lasting bonds despite disagreements" } }
       ]
     }
   ]
