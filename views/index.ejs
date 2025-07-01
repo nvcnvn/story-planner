@@ -144,9 +144,15 @@
                     .domain([new Date(events[0].timestamp), new Date(events[events.length - 1].timestamp)])
                     .range([margin.left, innerWidth]);
 
+                const padding = 1000 * 60 * 60 * 24; // 1 day padding in milliseconds
+                xScale.domain([
+                    new Date(events[0].timestamp - padding),
+                    new Date(events[events.length - 1].timestamp + padding)
+                ]);
+
                 const zoom = d3.zoom()
                     .scaleExtent([1, 10])
-                    .translateExtent([[0, 0], [innerWidth, innerHeight]])
+                    .translateExtent([[-50, -50], [innerWidth + 50, innerHeight + 50]])
                     .on('zoom', (event) => {
                         svg.selectAll('g').attr('transform', event.transform);
                     });
