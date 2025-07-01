@@ -8,7 +8,12 @@
       "attributes": {
         "static": { "species": "Human", "class": "Fighter", "background": "City Guard" },
         "dynamic_history": [
-          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Determined", "health": "Full" } }
+          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Focused", "health": "Full" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003", "mood": "Anxious" } },
+          { "event_id": "evt_007", "state": { "health": "Injured", "mood": "Grateful" } },
+          { "event_id": "evt_012", "state": { "health": "Moderately Injured", "mood": "Strained" } },
+          { "event_id": "evt_013", "state": { "health": "Injured", "mood": "Indebted" } },
+          { "event_id": "evt_020", "state": { "location": "loc_001", "mood": "Weary" } }
         ]
       },
       "relationships": [
@@ -22,11 +27,8 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 30, "respect": 40, "affection": 0, "resentment": 0 },
-              "label": "Initial acquaintance"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 30, "respect": 40, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance" },
+            { "event_id": "evt_004", "dynamics": { "trust": 15, "respect": 20 }, "label": "Valerius impressed by Lyra's navigation skills" }
           ]
         },
         { 
@@ -39,11 +41,9 @@
             "resentment": 10
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 10 },
-              "label": "Initial acquaintance, slight wariness of Flick's roguish nature"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 10 }, "label": "Initial acquaintance, slight wariness of Flick's roguish nature" },
+            { "event_id": "evt_003", "dynamics": { "trust": 15, "respect": 10, "affection": 5 }, "label": "Valerius protects Flick from harm" },
+            { "event_id": "evt_013", "dynamics": { "trust": 25, "respect": 30, "affection": 15 }, "label": "Valerius sees Flick's true value and courage" }
           ]
         },
         { 
@@ -56,11 +56,8 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 40, "respect": 50, "affection": 0, "resentment": 0 },
-              "label": "Initial acquaintance, respects Brother Theron's devotion"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 40, "respect": 50, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance, respects Brother Theron's devotion" },
+            { "event_id": "evt_007", "dynamics": { "trust": 25, "respect": 20, "affection": 15 }, "label": "Valerius deeply grateful for Theron's life-saving healing" }
           ]
         },
         { 
@@ -73,11 +70,9 @@
             "resentment": 5
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 5 },
-              "label": "Initial acquaintance, slightly concerned about Zephyr's focus"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 5 }, "label": "Initial acquaintance, slightly concerned about Zephyr's focus" },
+            { "event_id": "evt_002", "dynamics": { "trust": 5, "respect": -5, "resentment": 5 }, "label": "Valerius concerned about Zephyr's fascination with the portals" },
+            { "event_id": "evt_012", "dynamics": { "trust": 15, "respect": 20, "affection": 15, "resentment": -10 }, "label": "Zephyr realizes the importance of Valerius's protection" }
           ]
         }
       ]
@@ -89,7 +84,12 @@
       "attributes": {
         "static": { "species": "Elf", "class": "Ranger", "background": "Forest Hermit" },
         "dynamic_history": [
-          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Apprehensive", "health": "Full" } }
+          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Nervous", "health": "Full" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003" } },
+          { "event_id": "evt_004", "state": { "mood": "Confident" } },
+          { "event_id": "evt_008", "state": { "location": "loc_006", "mood": "Worried" } },
+          { "event_id": "evt_009", "state": { "location": "loc_007", "mood": "Relieved" } },
+          { "event_id": "evt_020", "state": { "location": "loc_001", "mood": "Thoughtful" } }
         ]
       },
       "relationships": [
@@ -103,11 +103,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 35, "respect": 45, "affection": 0, "resentment": 0 },
-              "label": "Initial acquaintance, respects Valerius's combat experience"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 35, "respect": 45, "affection": 0, "resentment": 0 }, "label": "Initial acquaintance, respects Valerius's combat experience" }
           ]
         },
         { 
@@ -120,11 +116,7 @@
             "resentment": 15
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 15, "respect": 20, "affection": 0, "resentment": 15 },
-              "label": "Initial acquaintance, wary of Flick's impulsiveness"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 15, "respect": 20, "affection": 0, "resentment": 15 }, "label": "Initial acquaintance, wary of Flick's impulsiveness" }
           ]
         },
         { 
@@ -137,11 +129,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 30, "respect": 40, "affection": 5, "resentment": 0 },
-              "label": "Initial acquaintance, appreciates Theron's wisdom"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 30, "respect": 40, "affection": 5, "resentment": 0 }, "label": "Initial acquaintance, appreciates Theron's wisdom" }
           ]
         },
         { 
@@ -154,11 +142,7 @@
             "resentment": 5
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 25, "respect": 35, "affection": 10, "resentment": 5 },
-              "label": "Initial acquaintance, finds Zephyr's enthusiasm both endearing and concerning"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 25, "respect": 35, "affection": 10, "resentment": 5 }, "label": "Initial acquaintance, finds Zephyr's enthusiasm both endearing and concerning" }
           ]
         }
       ]
@@ -170,7 +154,13 @@
       "attributes": {
         "static": { "species": "Halfling", "class": "Rogue", "background": "Urchin" },
         "dynamic_history": [
-          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Excited", "health": "Full" } }
+          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Eager", "health": "Full" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003" } },
+          { "event_id": "evt_003", "state": { "health": "Slightly Injured" } },
+          { "event_id": "evt_008", "state": { "location": "loc_006", "mood": "Scared" } },
+          { "event_id": "evt_009", "state": { "location": "loc_007", "mood": "Relieved" } },
+          { "event_id": "evt_013", "state": { "mood": "Proud" } },
+          { "event_id": "evt_020", "state": { "location": "loc_001", "mood": "Relieved" } }
         ]
       },
       "relationships": [
@@ -184,11 +174,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 40, "respect": 55, "affection": 15, "resentment": 0 },
-              "label": "Initial acquaintance, admires Valerius's strength and leadership"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 40, "respect": 55, "affection": 15, "resentment": 0 }, "label": "Initial acquaintance, admires Valerius's strength and leadership" }
           ]
         },
         { 
@@ -201,11 +187,7 @@
             "resentment": 20
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 20 },
-              "label": "Initial acquaintance, finds Lyra too uptight"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 20 }, "label": "Initial acquaintance, finds Lyra too uptight" }
           ]
         },
         { 
@@ -218,11 +200,7 @@
             "resentment": 15
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 15 },
-              "label": "Initial acquaintance, dislikes Theron's moral lectures"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 15 }, "label": "Initial acquaintance, dislikes Theron's moral lectures" }
           ]
         },
         { 
@@ -235,11 +213,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 35, "respect": 30, "affection": 25, "resentment": 0 },
-              "label": "Initial acquaintance, enjoys Zephyr's enthusiasm and curiosity"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 35, "respect": 30, "affection": 25, "resentment": 0 }, "label": "Initial acquaintance, enjoys Zephyr's enthusiasm and curiosity" }
           ]
         }
       ]
@@ -251,7 +225,10 @@
       "attributes": {
         "static": { "species": "Dwarf", "class": "Cleric", "background": "Temple Acolyte" },
         "dynamic_history": [
-          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Resolute", "health": "Full" } }
+          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Dutiful", "health": "Full" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003" } },
+          { "event_id": "evt_007", "state": { "mood": "Focused" } },
+          { "event_id": "evt_020", "state": { "location": "loc_001", "mood": "Somber" } }
         ]
       },
       "relationships": [
@@ -265,11 +242,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 45, "respect": 50, "affection": 10, "resentment": 0 },
-              "label": "Initial acquaintance, appreciates Valerius's sense of duty"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 45, "respect": 50, "affection": 10, "resentment": 0 }, "label": "Initial acquaintance, appreciates Valerius's sense of duty" }
           ]
         },
         { 
@@ -282,11 +255,7 @@
             "resentment": 5
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 35, "respect": 45, "affection": 5, "resentment": 5 },
-              "label": "Initial acquaintance, respects Lyra's caution but finds her aloof"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 35, "respect": 45, "affection": 5, "resentment": 5 }, "label": "Initial acquaintance, respects Lyra's caution but finds her aloof" }
           ]
         },
         { 
@@ -299,11 +268,7 @@
             "resentment": 10
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 15, "respect": 25, "affection": 15, "resentment": 10 },
-              "label": "Initial acquaintance, concerned about Flick's ethics but amused by spirit"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 15, "respect": 25, "affection": 15, "resentment": 10 }, "label": "Initial acquaintance, concerned about Flick's ethics but amused by spirit" }
           ]
         },
         { 
@@ -316,11 +281,7 @@
             "resentment": 5
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 30, "respect": 40, "affection": 15, "resentment": 5 },
-              "label": "Initial acquaintance, respects Zephyr's knowledge, worries about his focus"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 30, "respect": 40, "affection": 15, "resentment": 5 }, "label": "Initial acquaintance, respects Zephyr's knowledge, worries about his focus" }
           ]
         }
       ]
@@ -332,7 +293,11 @@
       "attributes": {
         "static": { "species": "Gnome", "class": "Wizard", "background": "Sage Apprentice" },
         "dynamic_history": [
-          { "timestamp": "M0_D1", "state": { "location": "loc_001", "mood": "Curious", "health": "Full" } }
+          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Intrigued", "health": "Full" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003", "mood": "Fascinated" } },
+          { "event_id": "evt_006", "state": { "mood": "Excited" } },
+          { "event_id": "evt_014", "state": { "mood": "Embarrassed" } },
+          { "event_id": "evt_020", "state": { "location": "loc_001", "mood": "Preoccupied" } }
         ]
       },
       "relationships": [
@@ -346,11 +311,7 @@
             "resentment": 5
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 50, "respect": 45, "affection": 10, "resentment": 5 },
-              "label": "Initial acquaintance, feels safe with Valerius but dislikes being told to focus"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 50, "respect": 45, "affection": 10, "resentment": 5 }, "label": "Initial acquaintance, feels safe with Valerius but dislikes being told to focus" }
           ]
         },
         { 
@@ -363,11 +324,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 35, "respect": 45, "affection": 15, "resentment": 0 },
-              "label": "Initial acquaintance, fascinated by Lyra's knowledge of nature"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 35, "respect": 45, "affection": 15, "resentment": 0 }, "label": "Initial acquaintance, fascinated by Lyra's knowledge of nature" }
           ]
         },
         { 
@@ -380,11 +337,7 @@
             "resentment": 0
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 30, "respect": 35, "affection": 30, "resentment": 0 },
-              "label": "Initial acquaintance, enjoys Flick's adventurous spirit and humor"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 30, "respect": 35, "affection": 30, "resentment": 0 }, "label": "Initial acquaintance, enjoys Flick's adventurous spirit and humor" }
           ]
         },
         { 
@@ -397,11 +350,7 @@
             "resentment": 10
           },
           "history": [
-            { 
-              "timestamp": "M0_D1", 
-              "dynamics": { "trust": 40, "respect": 50, "affection": 5, "resentment": 10 },
-              "label": "Initial acquaintance, respects Theron's wisdom but finds him too serious"
-            }
+            { "event_id": "evt_001", "dynamics": { "trust": 40, "respect": 50, "affection": 5, "resentment": 10 }, "label": "Initial acquaintance, respects Theron's wisdom but finds him too serious" }
           ]
         }
       ]
