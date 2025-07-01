@@ -208,8 +208,10 @@
                     .enter()
                     .append('text')
                     .attr('x', d => xScale(new Date(d.timestamp)))
-                    .attr('y', (d, i) => innerHeight / 2 - 20 - (i % 2) * 15) // Stagger text vertically
+                    .attr('y', (d, i) => innerHeight / 2 + (i % 2 === 0 ? -30 : 30)) // Move text farther from icons
                     .attr('text-anchor', 'middle')
+                    .attr('transform', (d, i) => `rotate(45, ${xScale(new Date(d.timestamp))}, ${innerHeight / 2 + (i % 2 === 0 ? -30 : 30)})`) // Tilt text at 45 degrees in the same direction
+                    .attr('fill', (d, i) => colors[i % colors.length]) // Match text color to shape color
                     .text(d => d.id); // Display only the event ID or title
 
                 // Add tooltip for event details
