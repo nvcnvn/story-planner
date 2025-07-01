@@ -164,16 +164,44 @@
 
                 const timelineGroup = svg.append('g');
 
+                const shapes = ['circle', 'rect', 'path'];
+                const colors = ['blue', 'green', 'red'];
+
                 timelineGroup.selectAll('circle')
                     .data(events)
                     .enter()
-                    .append('circle')
-                    .attr('cx', d => xScale(new Date(d.timestamp)))
-                    .attr('cy', innerHeight / 2)
-                    .attr('r', 5)
-                    .attr('fill', 'blue')
-                    .append('title')
-                    .text(d => d.description);
+                    .each(function(d, i) {
+                        const shape = shapes[i % shapes.length];
+                        const color = colors[i % colors.length];
+
+                        if (shape === 'circle') {
+                            d3.select(this)
+                                .append('circle')
+                                .attr('cx', xScale(new Date(d.timestamp)))
+                                .attr('cy', innerHeight / 2)
+                                .attr('r', 5)
+                                .attr('fill', color)
+                                .append('title')
+                                .text(d.description);
+                        } else if (shape === 'rect') {
+                            d3.select(this)
+                                .append('rect')
+                                .attr('x', xScale(new Date(d.timestamp)) - 5)
+                                .attr('y', innerHeight / 2 - 5)
+                                .attr('width', 10)
+                                .attr('height', 10)
+                                .attr('fill', color)
+                                .append('title')
+                                .text(d.description);
+                        } else if (shape === 'path') {
+                            d3.select(this)
+                                .append('path')
+                                .attr('d', `M${xScale(new Date(d.timestamp))},${innerHeight / 2 - 5} l5,10 l-10,0 Z`)
+                                .attr('fill', color)
+                                .append('title')
+                                .text(d.description);
+                        }
+                    });
 
                 timelineGroup.selectAll('text')
                     .data(events)
