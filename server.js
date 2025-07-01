@@ -51,6 +51,26 @@ function getCharacterStateAtTimestamp(character, timestamp) {
     return latestState;
 }
 
+// Function to calculate relationship dynamics at a given timestamp
+function getRelationshipDynamicsAtTimestamp(relationships, timestamp) {
+    return relationships.map(rel => {
+        let latestDynamics = { ...rel.dynamics };
+
+        // Find the most recent dynamics entry before or at the target timestamp
+        const relevantHistory = rel.history.filter(entry => entry.timestamp <= timestamp);
+        if (relevantHistory.length > 0) {
+            const lastEntry = relevantHistory[relevantHistory.length - 1];
+            latestDynamics = { ...latestDynamics, ...lastEntry.dynamics };
+        }
+
+        return {
+            target_char_id: rel.target_char_id,
+            type: rel.type,
+            dynamics: latestDynamics,
+            label: relevantHistory.length > 0 ? relevantHistory[relevantHistory.length - 1].label : "Initial state"
+        };
+    });
+}
 
 // Route to display the story
 app.get('/', (req, res) => {
@@ -71,24 +91,16 @@ app.get('/', (req, res) => {
   // Calculate final state for recap (using the timestamp of the last event)
   const lastEventTimestamp = sortedEvents.length > 0 ? sortedEvents[sortedEvents.length - 1].timestamp : "M0_D1";
   const characterRecap = storyData.characters ? storyData.characters.map(char => {
-      // Find the *actual* final state from the last event's effects if applicable
-      const finalEvent = sortedEvents[sortedEvents.length - 1];
-      let finalState = {};
-      if (finalEvent && finalEvent.effects) {
-          const effectOnChar = finalEvent.effects.find(eff => eff.target === char.id && eff.state_change);
-          if (effectOnChar) {
-              finalState = effectOnChar.state_change;
-          }
-      }
-      // If the last event didn't explicitly set state, try getting the last known state
-      // This is still simplified.
-      if (Object.keys(finalState).length === 0 && char.attributes.dynamic_history.length > 0) {
-          finalState = char.attributes.dynamic_history[char.attributes.dynamic_history.length - 1].state;
-      }
+      // Calculate final state
+      const finalState = getCharacterStateAtTimestamp(char, lastEventTimestamp);
+
+      // Calculate final relationship dynamics
+      const finalRelationships = getRelationshipDynamicsAtTimestamp(char.relationships, lastEventTimestamp);
 
       return {
           name: char.name,
-          finalState: finalState
+          finalState: finalState,
+          finalRelationships: finalRelationships
       };
   }) : [];
 

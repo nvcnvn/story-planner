@@ -15,7 +15,10 @@ Writing a complex story with deep lore, evolving characters, and intricate plotl
     *   Record character backstories and development arcs.
 *   **Relationship Mapping:**
     *   Define different types of relationships between characters (e.g., family, friend, rival, romantic).
-    *   Track how relationships evolve based on story events.
+    *   Track relationship dynamics with numerical values across multiple dimensions (trust, affection, respect, resentment, etc.).
+    *   Record the history of relationship changes over time, including timestamps and labels for significant events.
+    *   Watch relationships evolve organically as story events affect these emotional dimensions.
+    *   Visualize relationship networks dynamically, showing how they change over time and highlighting key moments.
 *   **Event Chronology:**
     *   Log key plot points and scenes as events with specific timestamps or chronological order.
     *   Link events to involved characters, locations, and lore elements.
@@ -45,7 +48,28 @@ Writing a complex story with deep lore, evolving characters, and intricate plotl
             ]
           },
           "relationships": [
-            { "target_char_id": "char_002", "type": "Ally", "history": [...] }
+            { 
+              "target_char_id": "char_002", 
+              "type": "Ally", 
+              "dynamics": {
+                "trust": 65,
+                "affection": 30,
+                "respect": 80,
+                "resentment": 10
+              },
+              "history": [
+                { 
+                  "timestamp": "y100_d1", 
+                  "dynamics": { "trust": 20, "affection": 0, "respect": 40, "resentment": 0 },
+                  "label": "Initial meeting"
+                },
+                { 
+                  "timestamp": "y101_d5", 
+                  "dynamics": { "trust": 40, "affection": 15, "respect": 60, "resentment": 5 },
+                  "label": "After saving from ambush"
+                }
+              ]
+            }
           ]
         }
         ```
@@ -59,7 +83,13 @@ Writing a complex story with deep lore, evolving characters, and intricate plotl
           "location_id": "loc_005",
           "effects": [
             { "target": "char_001", "state_change": { "mood": "Wary" } },
-            { "target": "relationship_char001_char002", "change": "Initiated" }
+            { 
+              "target": "relationship_char001_char002", 
+              "change": {
+                "dynamics": { "trust": +5, "respect": +10, "resentment": +3 },
+                "label": "Elara impressed by Kaelen's skill, but wary of his methods"
+              }
+            }
           ]
         }
         ```

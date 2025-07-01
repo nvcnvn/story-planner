@@ -12,10 +12,74 @@
         ]
       },
       "relationships": [
-        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+        { 
+          "target_char_id": "char_002", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 30,
+            "respect": 40,
+            "affection": 0,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 30, "respect": 40, "affection": 0, "resentment": 0 },
+              "label": "Initial acquaintance"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_003", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 20,
+            "respect": 30,
+            "affection": 5,
+            "resentment": 10
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 10 },
+              "label": "Initial acquaintance, slight wariness of Flick's roguish nature"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_004", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 40,
+            "respect": 50,
+            "affection": 0,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 40, "respect": 50, "affection": 0, "resentment": 0 },
+              "label": "Initial acquaintance, respects Brother Theron's devotion"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_005", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 25,
+            "respect": 35,
+            "affection": 0,
+            "resentment": 5
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 5 },
+              "label": "Initial acquaintance, slightly concerned about Zephyr's focus"
+            }
+          ]
+        }
       ]
     },
     {
@@ -29,10 +93,74 @@
         ]
       },
       "relationships": [
-        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+        { 
+          "target_char_id": "char_001", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 35,
+            "respect": 45,
+            "affection": 0,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 35, "respect": 45, "affection": 0, "resentment": 0 },
+              "label": "Initial acquaintance, respects Valerius's combat experience"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_003", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 15,
+            "respect": 20,
+            "affection": 0,
+            "resentment": 15
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 15, "respect": 20, "affection": 0, "resentment": 15 },
+              "label": "Initial acquaintance, wary of Flick's impulsiveness"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_004", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 30,
+            "respect": 40,
+            "affection": 5,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 30, "respect": 40, "affection": 5, "resentment": 0 },
+              "label": "Initial acquaintance, appreciates Theron's wisdom"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_005", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 25,
+            "respect": 35,
+            "affection": 10,
+            "resentment": 5
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 25, "respect": 35, "affection": 10, "resentment": 5 },
+              "label": "Initial acquaintance, finds Zephyr's enthusiasm both endearing and concerning"
+            }
+          ]
+        }
       ]
     },
     {
@@ -46,10 +174,74 @@
         ]
       },
       "relationships": [
-        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+        { 
+          "target_char_id": "char_001", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 40,
+            "respect": 55,
+            "affection": 15,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 40, "respect": 55, "affection": 15, "resentment": 0 },
+              "label": "Initial acquaintance, admires Valerius's strength and leadership"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_002", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 20,
+            "respect": 30,
+            "affection": 5,
+            "resentment": 20
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 20, "respect": 30, "affection": 5, "resentment": 20 },
+              "label": "Initial acquaintance, finds Lyra too uptight"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_004", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 25,
+            "respect": 35,
+            "affection": 0,
+            "resentment": 15
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 25, "respect": 35, "affection": 0, "resentment": 15 },
+              "label": "Initial acquaintance, dislikes Theron's moral lectures"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_005", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 35,
+            "respect": 30,
+            "affection": 25,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 35, "respect": 30, "affection": 25, "resentment": 0 },
+              "label": "Initial acquaintance, enjoys Zephyr's enthusiasm and curiosity"
+            }
+          ]
+        }
       ]
     },
     {
@@ -63,10 +255,74 @@
         ]
       },
       "relationships": [
-        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_005", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+        { 
+          "target_char_id": "char_001", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 45,
+            "respect": 50,
+            "affection": 10,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 45, "respect": 50, "affection": 10, "resentment": 0 },
+              "label": "Initial acquaintance, appreciates Valerius's sense of duty"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_002", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 35,
+            "respect": 45,
+            "affection": 5,
+            "resentment": 5
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 35, "respect": 45, "affection": 5, "resentment": 5 },
+              "label": "Initial acquaintance, respects Lyra's caution but finds her aloof"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_003", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 15,
+            "respect": 25,
+            "affection": 15,
+            "resentment": 10
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 15, "respect": 25, "affection": 15, "resentment": 10 },
+              "label": "Initial acquaintance, concerned about Flick's ethics but amused by spirit"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_005", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 30,
+            "respect": 40,
+            "affection": 15,
+            "resentment": 5
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 30, "respect": 40, "affection": 15, "resentment": 5 },
+              "label": "Initial acquaintance, respects Zephyr's knowledge, worries about his focus"
+            }
+          ]
+        }
       ]
     },
     {
@@ -80,10 +336,74 @@
         ]
       },
       "relationships": [
-        { "target_char_id": "char_001", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_002", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_003", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] },
-        { "target_char_id": "char_004", "type": "Acquaintance", "history": [{ "timestamp": "M0_D1", "status": "Neutral" }] }
+        { 
+          "target_char_id": "char_001", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 50,
+            "respect": 45,
+            "affection": 10,
+            "resentment": 5
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 50, "respect": 45, "affection": 10, "resentment": 5 },
+              "label": "Initial acquaintance, feels safe with Valerius but dislikes being told to focus"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_002", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 35,
+            "respect": 45,
+            "affection": 15,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 35, "respect": 45, "affection": 15, "resentment": 0 },
+              "label": "Initial acquaintance, fascinated by Lyra's knowledge of nature"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_003", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 30,
+            "respect": 35,
+            "affection": 30,
+            "resentment": 0
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 30, "respect": 35, "affection": 30, "resentment": 0 },
+              "label": "Initial acquaintance, enjoys Flick's adventurous spirit and humor"
+            }
+          ]
+        },
+        { 
+          "target_char_id": "char_004", 
+          "type": "Acquaintance", 
+          "dynamics": {
+            "trust": 40,
+            "respect": 50,
+            "affection": 5,
+            "resentment": 10
+          },
+          "history": [
+            { 
+              "timestamp": "M0_D1", 
+              "dynamics": { "trust": 40, "respect": 50, "affection": 5, "resentment": 10 },
+              "label": "Initial acquaintance, respects Theron's wisdom but finds him too serious"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -124,7 +444,21 @@
         { "target": "char_002", "state_change": { "location": "loc_003" } },
         { "target": "char_003", "state_change": { "location": "loc_003" } },
         { "target": "char_004", "state_change": { "location": "loc_003" } },
-        { "target": "char_005", "state_change": { "location": "loc_003", "mood": "Fascinated" } }
+        { "target": "char_005", "state_change": { "location": "loc_003", "mood": "Fascinated" } },
+        { 
+          "target": "relationship_char001_char005", 
+          "change": {
+            "dynamics": { "trust": 5, "respect": -5, "resentment": 5 },
+            "label": "Valerius concerned about Zephyr's fascination with the portals"
+          }
+        },
+        { 
+          "target": "relationship_char005_char001", 
+          "change": {
+            "dynamics": { "resentment": 10 },
+            "label": "Zephyr annoyed by Valerius's constant warnings"
+          }
+        }
       ]
     },
     {
@@ -136,7 +470,27 @@
       "effects": [
         { "target": "char_003", "state_change": { "health": "Slightly Injured" } },
         { "target": "char_004", "state_change": { "mood": "Annoyed" } },
-        { "target": "relationship_char001_char003", "change": "Increased Trust" }
+        { 
+          "target": "relationship_char001_char003", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 10, "affection": 5 },
+            "label": "Valerius protects Flick from harm"
+          }
+        },
+        { 
+          "target": "relationship_char003_char001", 
+          "change": {
+            "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -5 },
+            "label": "Flick grateful for Valerius's protection"
+          }
+        },
+        { 
+          "target": "relationship_char004_char003", 
+          "change": {
+            "dynamics": { "resentment": 10 },
+            "label": "Theron annoyed at Flick's carelessness causing the rat attack"
+          }
+        }
       ]
     },
     {
@@ -147,8 +501,34 @@
       "location_id": "loc_004",
       "effects": [
         { "target": "char_002", "state_change": { "mood": "Confident" } },
-        { "target": "relationship_char002_char001", "change": "Increased Respect" },
-        { "target": "relationship_char002_char005", "change": "Increased Respect" }
+        { 
+          "target": "relationship_char001_char002", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 20 },
+            "label": "Valerius impressed by Lyra's navigation skills"
+          }
+        },
+        { 
+          "target": "relationship_char002_char001", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 5, "affection": 5 },
+            "label": "Lyra appreciates Valerius's trust in her abilities"
+          }
+        },
+        { 
+          "target": "relationship_char003_char002", 
+          "change": {
+            "dynamics": { "respect": 15, "resentment": -5 },
+            "label": "Flick reluctantly impressed by Lyra's skill"
+          }
+        },
+        { 
+          "target": "relationship_char005_char002", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 15, "affection": 5 },
+            "label": "Zephyr fascinated by Lyra's natural intuition"
+          }
+        }
       ]
     },
     {
@@ -160,7 +540,20 @@
       "effects": [
         { "target": "char_003", "state_change": { "mood": "Smug" } },
         { "target": "char_004", "state_change": { "mood": "Suspicious" } },
-        { "target": "relationship_char003_char004", "change": "Minor Conflict/Distrust" }
+        { 
+          "target": "relationship_char004_char003", 
+          "change": {
+            "dynamics": { "trust": -10, "respect": -5, "resentment": 15 },
+            "label": "Theron suspects Flick stole the fungi"
+          }
+        },
+        { 
+          "target": "relationship_char003_char004", 
+          "change": {
+            "dynamics": { "respect": -5, "resentment": 15 },
+            "label": "Flick resents Theron's judgmental attitude"
+          }
+        }
       ]
     },
     {
@@ -171,7 +564,20 @@
       "location_id": "loc_005",
       "effects": [
         { "target": "char_005", "state_change": { "mood": "Excited" } },
-        { "target": "relationship_char005_char002", "change": "Shared Discovery/Bonding" }
+        { 
+          "target": "relationship_char002_char005", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 15, "affection": 10, "resentment": -5 },
+            "label": "Lyra impressed by Zephyr's scholarly knowledge"
+          }
+        },
+        { 
+          "target": "relationship_char005_char002", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 10, "affection": 15 },
+            "label": "Zephyr enjoys Lyra's genuine interest in his discoveries"
+          }
+        }
       ]
     },
     {
@@ -183,7 +589,27 @@
       "effects": [
         { "target": "char_001", "state_change": { "health": "Injured", "mood": "Grateful" } },
         { "target": "char_004", "state_change": { "mood": "Focused" } },
-        { "target": "relationship_char004_char001", "change": "Increased Trust/Life Debt" }
+        { 
+          "target": "relationship_char001_char004", 
+          "change": {
+            "dynamics": { "trust": 25, "respect": 20, "affection": 15 },
+            "label": "Valerius deeply grateful for Theron's life-saving healing"
+          }
+        },
+        { 
+          "target": "relationship_char004_char001", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 10, "affection": 15 },
+            "label": "Theron impressed by Valerius's bravery in combat"
+          }
+        },
+        { 
+          "target": "relationship_char003_char001", 
+          "change": {
+            "dynamics": { "respect": 20 },
+            "label": "Flick sees Valerius's selflessness in battle"
+          }
+        }
       ]
     },
     {
@@ -197,10 +623,24 @@
         { "target": "char_003", "state_change": { "location": "loc_006", "mood": "Scared" } },
         { "target": "char_001", "state_change": { "mood": "Anxious" } },
         { "target": "char_004", "state_change": { "mood": "Concerned" } },
-        { "target": "char_005", "state_change": { "mood": "Distressed" } }
+        { "target": "char_005", "state_change": { "mood": "Distressed" } },
+        { 
+          "target": "relationship_char002_char003", 
+          "change": {
+            "dynamics": { "trust": 5 },
+            "label": "Lyra realizes she must work with Flick to survive"
+          }
+        },
+        { 
+          "target": "relationship_char003_char002", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 5, "affection": 5 },
+            "label": "Flick relies on Lyra's calm in crisis"
+          }
+        }
       ]
     },
-     {
+    {
       "id": "evt_009",
       "timestamp": "M4_D15",
       "description": "Lyra and Flick navigate the Collapsed Passage and reunite with the group, relying on each other's skills.",
@@ -212,7 +652,20 @@
         { "target": "char_001", "state_change": { "location": "loc_007" } },
         { "target": "char_004", "state_change": { "location": "loc_007" } },
         { "target": "char_005", "state_change": { "location": "loc_007" } },
-        { "target": "relationship_char002_char003", "change": "Became Allies/Stronger Bond" }
+        { 
+          "target": "relationship_char002_char003", 
+          "change": {
+            "dynamics": { "trust": 25, "respect": 20, "affection": 15, "resentment": -10 },
+            "label": "Lyra and Flick forge a bond through shared survival"
+          }
+        },
+        { 
+          "target": "relationship_char003_char002", 
+          "change": {
+            "dynamics": { "trust": 30, "respect": 25, "affection": 20, "resentment": -15 },
+            "label": "Flick develops deep respect for Lyra during their ordeal"
+          }
+        }
       ]
     },
     {
@@ -224,7 +677,20 @@
       "effects": [
         { "target": "char_005", "state_change": { "mood": "Obsessed" } },
         { "target": "char_001", "state_change": { "mood": "Frustrated" } },
-        { "target": "relationship_char001_char005", "change": "Minor Conflict/Annoyance" }
+        { 
+          "target": "relationship_char001_char005", 
+          "change": {
+            "dynamics": { "trust": -10, "respect": -5, "resentment": 20 },
+            "label": "Valerius frustrated by Zephyr's lack of caution"
+          }
+        },
+        { 
+          "target": "relationship_char005_char001", 
+          "change": {
+            "dynamics": { "resentment": 15 },
+            "label": "Zephyr feels Valerius doesn't value knowledge enough"
+          }
+        }
       ]
     },
     {
@@ -236,7 +702,27 @@
       "effects": [
         { "target": "char_004", "state_change": { "mood": "Righteous" } },
         { "target": "char_002", "state_change": { "mood": "Uncertain" } },
-        { "target": "relationship_char004_char002", "change": "Philosophical Disagreement" }
+        { 
+          "target": "relationship_char004_char002", 
+          "change": {
+            "dynamics": { "respect": -5, "resentment": 10 },
+            "label": "Theron disappointed by Lyra's caution over compassion"
+          }
+        },
+        { 
+          "target": "relationship_char002_char004", 
+          "change": {
+            "dynamics": { "respect": 5, "resentment": 15 },
+            "label": "Lyra frustrated by Theron's moral stance ignoring practical concerns"
+          }
+        },
+        { 
+          "target": "relationship_char001_char004", 
+          "change": {
+            "dynamics": { "respect": 5, "resentment": 10 },
+            "label": "Valerius conflicted about Theron's priorities"
+          }
+        }
       ]
     },
     {
@@ -247,10 +733,34 @@
       "location_id": "loc_008",
       "effects": [
         { "target": "char_001", "state_change": { "health": "Moderately Injured", "mood": "Strained" } },
-        { "target": "relationship_char001_char002", "change": "Increased Teamwork/Trust" },
-        { "target": "relationship_char001_char003", "change": "Increased Teamwork/Trust" },
-        { "target": "relationship_char001_char004", "change": "Increased Teamwork/Trust" },
-        { "target": "relationship_char001_char005", "change": "Increased Teamwork/Trust" }
+        { 
+          "target": "relationship_char002_char001", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 25, "affection": 10 },
+            "label": "Lyra deeply impressed by Valerius's bravery"
+          }
+        },
+        { 
+          "target": "relationship_char003_char001", 
+          "change": {
+            "dynamics": { "trust": 20, "respect": 30, "affection": 15 },
+            "label": "Flick sees Valerius as truly heroic"
+          }
+        },
+        { 
+          "target": "relationship_char004_char001", 
+          "change": {
+            "dynamics": { "respect": 20, "affection": 10 },
+            "label": "Theron admires Valerius's sacrifice"
+          }
+        },
+        { 
+          "target": "relationship_char005_char001", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 20, "affection": 15, "resentment": -10 },
+            "label": "Zephyr realizes the importance of Valerius's protection"
+          }
+        }
       ]
     },
     {
@@ -262,7 +772,34 @@
       "effects": [
         { "target": "char_003", "state_change": { "mood": "Proud" } },
         { "target": "char_001", "state_change": { "health": "Injured", "mood": "Indebted" } },
-        { "target": "relationship_char003_char001", "change": "Major Trust Increase/Respect" }
+        { 
+          "target": "relationship_char001_char003", 
+          "change": {
+            "dynamics": { "trust": 25, "respect": 30, "affection": 15 },
+            "label": "Valerius sees Flick's true value and courage"
+          }
+        },
+        { 
+          "target": "relationship_char003_char001", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 5, "affection": 20 },
+            "label": "Flick proud to have helped Valerius"
+          }
+        },
+        { 
+          "target": "relationship_char004_char003", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 20, "resentment": -15 },
+            "label": "Theron sees Flick's good heart beneath the rogue exterior"
+          }
+        },
+        { 
+          "target": "relationship_char003_char004", 
+          "change": {
+            "dynamics": { "respect": 15, "affection": 10 },
+            "label": "Flick grateful for Theron's healing skills"
+          }
+        }
       ]
     },
     {
@@ -274,7 +811,20 @@
       "effects": [
         { "target": "char_005", "state_change": { "mood": "Embarrassed" } },
         { "target": "char_004", "state_change": { "mood": "Exasperated" } },
-        { "target": "relationship_char005_char004", "change": "Friction/Annoyance" }
+        { 
+          "target": "relationship_char004_char005", 
+          "change": {
+            "dynamics": { "trust": -10, "resentment": 15 },
+            "label": "Theron frustrated by Zephyr's careless spellcasting"
+          }
+        },
+        { 
+          "target": "relationship_char005_char004", 
+          "change": {
+            "dynamics": { "resentment": 20 },
+            "label": "Zephyr feels Theron is being unfairly harsh"
+          }
+        }
       ]
     },
     {
@@ -287,7 +837,34 @@
         { "target": "char_002", "state_change": { "mood": "Adamant" } },
         { "target": "char_003", "state_change": { "mood": "Impatient" } },
         { "target": "char_001", "state_change": { "mood": "Mediating" } },
-        { "target": "relationship_char002_char003", "change": "Conflict/Disagreement" }
+        { 
+          "target": "relationship_char002_char003", 
+          "change": {
+            "dynamics": { "trust": -15, "resentment": 20 },
+            "label": "Lyra frustrated by Flick reverting to recklessness"
+          }
+        },
+        { 
+          "target": "relationship_char003_char002", 
+          "change": {
+            "dynamics": { "resentment": 25 },
+            "label": "Flick feels Lyra is too controlling"
+          }
+        },
+        { 
+          "target": "relationship_char001_char002", 
+          "change": {
+            "dynamics": { "respect": 5 },
+            "label": "Valerius appreciates Lyra's commitment to safety"
+          }
+        },
+        { 
+          "target": "relationship_char001_char003", 
+          "change": {
+            "dynamics": { "affection": 5 },
+            "label": "Valerius understands Flick's frustration"
+          }
+        }
       ]
     },
     {
@@ -301,7 +878,21 @@
         { "target": "char_002", "state_change": { "mood": "Cautiously Optimistic" } },
         { "target": "char_003", "state_change": { "mood": "Relieved" } },
         { "target": "char_004", "state_change": { "mood": "Hopeful" } },
-        { "target": "char_005", "state_change": { "mood": "Excited" } }
+        { "target": "char_005", "state_change": { "mood": "Excited" } },
+        { 
+          "target": "relationship_char002_char003", 
+          "change": {
+            "dynamics": { "resentment": -10 },
+            "label": "Relief eases tension between Lyra and Flick"
+          }
+        },
+        { 
+          "target": "relationship_char003_char002", 
+          "change": {
+            "dynamics": { "resentment": -15 },
+            "label": "Flick's frustration with Lyra fades with progress"
+          }
+        }
       ]
     },
     {
@@ -313,10 +904,16 @@
       "effects": [
         { "target": "char_001", "state_change": { "health": "Injured" } },
         { "target": "char_005", "state_change": { "health": "Slightly Injured" } },
-        { "target": "relationship_all", "change": "Peak Team Cohesion" }
+        { 
+          "target": "relationship_all", 
+          "change": {
+            "dynamics": { "trust": 20, "respect": 15, "affection": 10, "resentment": -20 },
+            "label": "Team bonds through coordinated combat"
+          }
+        }
       ]
     },
-     {
+    {
       "id": "evt_018",
       "timestamp": "M9_D5",
       "description": "Final mapping checks. Zephyr realizes the portals are powered by a trapped entity.",
@@ -325,7 +922,20 @@
       "effects": [
         { "target": "char_005", "state_change": { "mood": "Shocked" } },
         { "target": "char_004", "state_change": { "mood": "Disturbed" } },
-        { "target": "relationship_char005_char004", "change": "Shared Moral Concern" }
+        { 
+          "target": "relationship_char005_char004", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 10, "affection": 15, "resentment": -15 },
+            "label": "Zephyr and Theron share a profound ethical concern"
+          }
+        },
+        { 
+          "target": "relationship_char004_char005", 
+          "change": {
+            "dynamics": { "trust": 15, "respect": 20, "affection": 10, "resentment": -15 },
+            "label": "Theron appreciates Zephyr's moral sensitivity"
+          }
+        }
       ]
     },
     {
@@ -339,7 +949,28 @@
         { "target": "char_002", "state_change": { "mood": "Conflicted" } },
         { "target": "char_003", "state_change": { "mood": "Eager to Leave" } },
         { "target": "char_004", "state_change": { "mood": "Troubled" } },
-        { "target": "char_005", "state_change": { "mood": "Regretful" } }
+        { "target": "char_005", "state_change": { "mood": "Regretful" } },
+        { 
+          "target": "relationship_char004_char003", 
+          "change": {
+            "dynamics": { "resentment": 15 },
+            "label": "Theron disappointed in Flick's selfish desire to leave"
+          }
+        },
+        { 
+          "target": "relationship_char005_char001", 
+          "change": {
+            "dynamics": { "respect": -5, "resentment": 10 },
+            "label": "Zephyr disappointed in Valerius's cautious decision"
+          }
+        },
+        { 
+          "target": "relationship_char005_char003", 
+          "change": {
+            "dynamics": { "respect": -10, "resentment": 15 },
+            "label": "Zephyr frustrated by Flick's self-preservation attitude"
+          }
+        }
       ]
     },
     {
@@ -354,7 +985,13 @@
         { "target": "char_003", "state_change": { "location": "loc_001", "mood": "Relieved" } },
         { "target": "char_004", "state_change": { "location": "loc_001", "mood": "Somber" } },
         { "target": "char_005", "state_change": { "location": "loc_001", "mood": "Preoccupied" } },
-        { "target": "relationship_all", "change": "Solidified Team/Shared Experience" }
+        { 
+          "target": "relationship_all", 
+          "change": {
+            "dynamics": { "trust": 10, "respect": 10, "affection": 15 },
+            "label": "Shared adventure creates lasting bonds despite disagreements"
+          }
+        }
       ]
     }
   ]
