@@ -8,8 +8,8 @@
       "attributes": {
         "static": { "species": "Human", "class": "Fighter", "background": "City Guard" },
         "dynamic_history": [
-          { "event_id": "evt_001", "state": { "location": "loc_001", "mood": "Focused", "health": "Full" } },
-          { "event_id": "evt_002", "state": { "location": "loc_003", "mood": "Anxious" } },
+          { "event_id": "evt_001", "state": { "mood": "Focused" } },
+          { "event_id": "evt_002", "state": { "location": "loc_003" } },
           { "event_id": "evt_007", "state": { "health": "Injured", "mood": "Grateful" } },
           { "event_id": "evt_012", "state": { "health": "Moderately Injured", "mood": "Strained" } },
           { "event_id": "evt_013", "state": { "health": "Injured", "mood": "Indebted" } },
