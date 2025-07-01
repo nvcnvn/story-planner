@@ -421,7 +421,7 @@
   "events": [
     {
       "id": "evt_001",
-      "timestamp": "M1_D1",
+      "timestamp": "2025-01-01",
       "description": "The group receives their assignment from the Ministry of Exploration.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_001",
@@ -435,7 +435,7 @@
     },
     {
       "id": "evt_002",
-      "timestamp": "M1_D5",
+      "timestamp": "2025-01-05",
       "description": "First entry into the Shifting Dungeon. The entrance portal feels unstable.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_002",
@@ -463,7 +463,7 @@
     },
     {
       "id": "evt_003",
-      "timestamp": "M1_D15",
+      "timestamp": "2025-01-15",
       "description": "Minor skirmish with giant cave rats. Valerius protects Flick.",
       "participants": ["char_001", "char_003", "char_004"],
       "location_id": "loc_003",
@@ -495,7 +495,7 @@
     },
     {
       "id": "evt_004",
-      "timestamp": "M2_D3",
+      "timestamp": "2025-02-03",
       "description": "Lyra successfully navigates the group through the Glimmering Caves, avoiding a hidden chasm.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_004",
@@ -533,7 +533,7 @@
     },
     {
       "id": "evt_005",
-      "timestamp": "M2_D20",
+      "timestamp": "2025-02-20",
       "description": "Running low on rations. Flick 'finds' some edible fungi, sharing reluctantly.",
       "participants": ["char_003", "char_004"],
       "location_id": "loc_004",
@@ -558,7 +558,7 @@
     },
     {
       "id": "evt_006",
-      "timestamp": "M3_D10",
+      "timestamp": "2025-03-10",
       "description": "Zephyr deciphers strange runes in the Echoing Library, revealing a clue about portal stability.",
       "participants": ["char_005", "char_002"],
       "location_id": "loc_005",
@@ -582,7 +582,7 @@
     },
     {
       "id": "evt_007",
-      "timestamp": "M3_D25",
+      "timestamp": "2025-03-25",
       "description": "Ambushed by Goblins. Brother Theron heals Valerius from a serious wound.",
       "participants": ["char_001", "char_004", "char_003"],
       "location_id": "loc_005",
@@ -614,7 +614,7 @@
     },
     {
       "id": "evt_008",
-      "timestamp": "M4_D5",
+      "timestamp": "2025-04-05",
       "description": "A portal malfunctions, separating Lyra and Flick from the others.",
       "participants": ["char_002", "char_003"],
       "location_id": "loc_003",
@@ -642,7 +642,7 @@
     },
     {
       "id": "evt_009",
-      "timestamp": "M4_D15",
+      "timestamp": "2025-04-15",
       "description": "Lyra and Flick navigate the Collapsed Passage and reunite with the group, relying on each other's skills.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_006",
@@ -670,7 +670,7 @@
     },
     {
       "id": "evt_010",
-      "timestamp": "M5_D8",
+      "timestamp": "2025-05-08",
       "description": "Discovering ancient murals depicting the dungeon's purpose. Zephyr is engrossed, ignoring immediate danger.",
       "participants": ["char_005", "char_001"],
       "location_id": "loc_007",
@@ -695,7 +695,7 @@
     },
     {
       "id": "evt_011",
-      "timestamp": "M5_D22",
+      "timestamp": "2025-05-22",
       "description": "Encounter a trapped creature. Theron insists on freeing it, causing debate about safety vs. compassion.",
       "participants": ["char_004", "char_002", "char_001"],
       "location_id": "loc_007",
@@ -727,7 +727,7 @@
     },
     {
       "id": "evt_012",
-      "timestamp": "M6_D12",
+      "timestamp": "2025-06-12",
       "description": "A large Cave Troll attacks. Valerius holds it off while the others prepare a trap.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_008",
@@ -765,7 +765,7 @@
     },
     {
       "id": "evt_013",
-      "timestamp": "M6_D13",
+      "timestamp": "2025-06-13",
       "description": "Flick triggers the trap successfully, saving Valerius. Theron heals Valerius again.",
       "participants": ["char_003", "char_001", "char_004"],
       "location_id": "loc_008",
@@ -804,7 +804,7 @@
     },
     {
       "id": "evt_014",
-      "timestamp": "M7_D7",
+      "timestamp": "2025-07-07",
       "description": "Navigating the Crystal Labyrinth. Zephyr's magic misfires, causing temporary disorientation.",
       "participants": ["char_005", "char_004"],
       "location_id": "loc_008",
@@ -829,7 +829,7 @@
     },
     {
       "id": "evt_015",
-      "timestamp": "M7_D21",
+      "timestamp": "2025-07-21",
       "description": "Argument about the best path forward. Lyra's caution clashes with Flick's desire for shortcuts.",
       "participants": ["char_002", "char_003", "char_001"],
       "location_id": "loc_008",
@@ -869,7 +869,7 @@
     },
     {
       "id": "evt_016",
-      "timestamp": "M8_D4",
+      "timestamp": "2025-08-04",
       "description": "Discover Portal Hub Beta, potentially closer to an exit portal.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_009",
@@ -897,7 +897,7 @@
     },
     {
       "id": "evt_017",
-      "timestamp": "M8_D18",
+      "timestamp": "2025-08-18",
       "description": "Confront a Golem Guardian protecting the suspected exit portal. Requires coordinated effort.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_009",
@@ -915,7 +915,7 @@
     },
     {
       "id": "evt_018",
-      "timestamp": "M9_D5",
+      "timestamp": "2025-09-05",
       "description": "Final mapping checks. Zephyr realizes the portals are powered by a trapped entity.",
       "participants": ["char_005", "char_004"],
       "location_id": "loc_009",
@@ -940,7 +940,7 @@
     },
     {
       "id": "evt_019",
-      "timestamp": "M9_D20",
+      "timestamp": "2025-09-20",
       "description": "Group debates freeing the entity vs. escaping. They decide to report findings and escape.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_009",
@@ -975,7 +975,7 @@
     },
     {
       "id": "evt_020",
-      "timestamp": "M9_D21",
+      "timestamp": "2025-09-21",
       "description": "Activate the exit portal and return to the Ministry, mission accomplished but changed.",
       "participants": ["char_001", "char_002", "char_003", "char_004", "char_005"],
       "location_id": "loc_001",

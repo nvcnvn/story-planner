@@ -141,13 +141,16 @@
                 const innerHeight = height - margin.top - margin.bottom;
 
                 const xScale = d3.scaleTime()
-                    .domain([new Date(events[0].timestamp), new Date(events[events.length - 1].timestamp)])
+                    .domain([
+                        new Date(events[0].timestamp),
+                        new Date(events[events.length - 1].timestamp)
+                    ])
                     .range([margin.left, innerWidth]);
 
-                const padding = 1000 * 60 * 60 * 24; // 1 day padding in milliseconds
+                const padding = 1000 * 60 * 60; // 1 hour padding in milliseconds
                 xScale.domain([
-                    new Date(events[0].timestamp - padding),
-                    new Date(events[events.length - 1].timestamp + padding)
+                    new Date(new Date(events[0].timestamp).getTime() - padding),
+                    new Date(new Date(events[events.length - 1].timestamp).getTime() + padding)
                 ]);
 
                 const zoom = d3.zoom()
