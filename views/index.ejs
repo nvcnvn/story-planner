@@ -177,9 +177,32 @@
                     .enter()
                     .append('text')
                     .attr('x', d => xScale(new Date(d.timestamp)))
-                    .attr('y', innerHeight / 2 - 10)
+                    .attr('y', innerHeight / 2 - 20) // Adjusted to avoid overlap
                     .attr('text-anchor', 'middle')
-                    .text(d => d.timestamp);
+                    .text(d => d.id); // Display only the event ID or title
+
+                // Add tooltip for event details
+                const tooltip = d3.select('body').append('div')
+                    .style('position', 'absolute')
+                    .style('background', '#fff')
+                    .style('border', '1px solid #ccc')
+                    .style('padding', '10px')
+                    .style('border-radius', '5px')
+                    .style('box-shadow', '0 2px 5px rgba(0,0,0,0.1)')
+                    .style('visibility', 'hidden');
+
+                timelineGroup.selectAll('circle')
+                    .on('mouseover', (event, d) => {
+                        tooltip.style('visibility', 'visible')
+                            .text(d.description);
+                    })
+                    .on('mousemove', (event) => {
+                        tooltip.style('top', `${event.pageY + 10}px`)
+                            .style('left', `${event.pageX + 10}px`);
+                    })
+                    .on('mouseout', () => {
+                        tooltip.style('visibility', 'hidden');
+                    });
             </script>
         </div>
 
