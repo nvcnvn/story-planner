@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .style('box-shadow', '0 2px 5px rgba(0,0,0,0.1)')
         .style('visibility', 'hidden');
 
-    timelineGroup.selectAll('circle')
+    timelineGroup.selectAll('circle, rect, path')
         .on('mouseover', (event, d) => {
             tooltip.style('visibility', 'visible')
                 .text(d.description);
